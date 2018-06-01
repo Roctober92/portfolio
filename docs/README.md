@@ -6,7 +6,7 @@
 
 <br><br><br>
 
-<h1 id="linkedin"><a href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
+<h1 id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
 
 <br>
 
