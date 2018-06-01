@@ -1,4 +1,4 @@
-<p id="library">Data Science Library</p>
+<p id="library">Data Science Portfolio</p>
 <p id="name">by Andrew Wolfe</p>
 <p id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></p>
 
