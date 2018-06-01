@@ -1,17 +1,34 @@
 <h1 id="library">Data Science Library</h1>
 
-<br>
-
 <h1 id="name">Andrew Wolfe</h1>
 
-<br><br><br>
+<br><br>
 
 <h1 id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
 
 <br>
 
-<h1 id="website"><a id="website" href="https://roctober92.github.io" target="_blank">Website Created</a></h1>
+<h1 id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></h1>
 
+<br>
+
+<p id="machine" class="website">Machine Learning</p>
+
+<br>
+
+<p id="consult" class="website">Consulting <i>(link forthcoming)</i></p>
+
+<br>
+
+<p id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></p>
+
+<br>
+
+<p id="model" class="website">2018 COMAP Math Modeling Competition</p>
+
+<br>
+
+<p id="math335" class="website">Data Visualization Examples</p>
 
 
 
@@ -30,7 +47,7 @@ font-family: 'Bitter', serif;
 #name{
 margin: auto;
 text-align: center;
-font-size: 50px;
+font-size: 30px;
 font-family: 'Fjalla One', sans-serif;
 }
 #linkedin{
@@ -41,10 +58,27 @@ font-family: 'Nanum Gothic', sans-serif;
 color: #0077B5;
 }
 #website{
+color: #C22C23;
+}
+.website{
 margin: auto;
 text-align: center;
 font-size: 40px;
 font-family: 'Quicksand', sans-serif;
-color: #C22C23;
+}
+#machine{
+color: #EECA38;
+}
+#consult{
+color: darkgrey;
+}
+#snow{
+color: #146419;
+}
+#model{
+color: #214485;
+}
+#math335{
+color: #7F52E8;
 }
 </style>
