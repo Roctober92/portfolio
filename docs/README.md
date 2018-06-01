@@ -8,5 +8,6 @@ Here is a good representation of my data work!!!!
 #huh{
 margin: auto;
 text-align: center;
+color: red;
 }
 </style>
