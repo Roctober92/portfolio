@@ -25,7 +25,7 @@
 #library{
 margin: auto;
 text-align: center;
-font-size: 90px;
+font-size: 80px;
 color: #753AC6;
 font-family: 'Bitter', serif;
 }

@@ -12,7 +12,7 @@ library(lubridate)
 
 <br><br>
 
-<p id="method">Clustering In R</p>
+<p id="method"><a id="method" href="cluster.html" target="_blank" >Clustering In R</a></p>
 
 
 

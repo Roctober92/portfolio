@@ -1,0 +1,192 @@
+---
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(cluster)
+```
+
+<p id="title">Clustering: Dendrograms and K-Means</p>
+
+<br><br><br><br>
+
+<p id="desc">Clustering is the ability to link observations together <i>(customers)</i> based on calculated distance, which distance is calculated based on certain attributes <i>(customer's neighborhood, age, etc.)</i> of the data.<br><br><strong>The following </strong>is an example of this in R, where I clustered states based on different attributes: <i>population, income, illiteracy, life expectancy, etc.</i>This was analyzed in two ways: by <i>dendrogram</i>, and through the k-means method. <br><br>Simply, a <i>dendrogram</i> makes small groups of the observations by like attributes, and then groups the groups together to form slightly large groups of the smaller groups. It might look like a March Madness bracket!<br><br>In the K-means method, we decide we want to make an arbitrary amount of centers (k), and then go through an iterative process where we want to put the k center in the middle the observations so that there is a minimum distance between all.<br><br></p>
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+# get data
+states_data <- state.x77
+```
+
+
+```{r}
+# Compute distance matrix
+distance = dist(as.matrix(states_data))
+
+# Perform Clustering
+hc <- hclust(distance, method = "average")
+
+# plot
+plot(hc)
+
+# Normalized Data
+scaled_data <- scale(states_data)
+
+# Scaled Data Distance
+scale_distance <- dist(as.matrix(scaled_data))
+
+# Clustering with Normalized data
+scale_cluster <- hclust(scale_distance, method = "average")
+
+# plot
+plot(scale_cluster)
+```
+
+The normalized data has more clusters at the first level than the non-normalized data. The non-normalized data clusters more groups right away.
+
+Now taking Area away ...
+
+```{r}
+# Take area away
+
+st_data <- data.frame(states_data) # matrix to DF
+states <- st_data %>% 
+  select(-Area)
+
+states <- as.matrix(states) # convert back to matrix
+
+# Distance
+sin_area_distance = dist(as.matrix(states))
+
+# Clustering
+sin_area_clusters <- hclust(sin_area_distance, method = "average")
+
+# Plot
+plot(sin_area_clusters)
+
+```
+
+The Dendrogram for the data without the <i>area</i> column is in fact very different from the former two. For example, Alaska no longer is by itself for most of the grouping, but instad California and New York form the distant cluster.
+
+## K means
+
+```{r}
+# get clusters using normalized data
+clusters = kmeans(scaled_data, 3)
+(clusters)
+```
+
+The size of the 3 clusters:
+
+* 24
+* 15
+* 11
+
+The means are affected and determined by the states grouped within.
+For example the group 2 area is so much different from the other two because it was grouped with Alaska, who's areas is by far the greatest between all states.
+
+## Within Cluster Within SS for K 1-25
+
+```{r}
+table <- NULL
+
+for (k in 1:25){
+  clusters_for <- kmeans(scaled_data, k)
+  table[k] <- sum(clusters_for$withinss)
+}
+
+plot(table, col = topo.colors(25))
+```
+
+This is very abitruary since elbow point is not obvious.
+
+Therefore, I will pick a k of 6 clusters to be the cluster amount for the remainder of the analysis.
+
+## Cluster with K = 6
+
+```{r}
+clusters = kmeans(scaled_data, 6)
+(clusters)
+```
+
+These are the groups made:
+
+1. Colorado, Connecticut, Iowa, Kansas, Rhode Island, South Dakota, Wisconsin, Utah
+
+2. Alaska
+
+3.Delware, Idaho, Indiana, Maine, Missouri, Montana, Nevada, New Hampshire, Oklahoma, Vermont, Wyoming
+
+4. California, Florida, Illinois, Maryland, Michigan, New Jersey, New York, Ohio, Pennssylvania, Texas, Virginia
+
+5. Arizona, Hawaii, Oregon, Washington
+
+6. Alabama, Georgia, Kentucky, Louisiana, Mississippi, New Mexico, North Carolina, South Carolina, Tennessee, West Virginia
+
+## Make a 2D plot 
+
+```{r}
+clusplot(scaled_data, clusters$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
+```
+
+## Insight Gained
+
+Since there are about 8 attributes used, it seems like there were many - not one - defining feature or influence that helped shape these groups.
+
+Group 4, which contains Texas, California, and New York, could be grouped together based on commonality with population, and to an exteny maybe salary and murder.
+
+Group 6 seems to be a sub-belt group, which might hold common income, frost, and area statistics.
+
+Now, the values of the components are a little more difficult to distinguish. It seems like colder, more northern states are in the positive side of the X-Axis, whereas the sunbelt group 6 is way on the polar end.
+
+## NBA Dataset
+
+```{r}
+# Read in data
+nba <- read_csv("/Users/Wolfe/Desktop/Stats/nba_dataset.csv")
+
+# Make the teams character the index
+rownames(nba) <- nba$Team
+
+# Take off extra columns
+nba$X25 <- NULL
+nba$Team <- NULL
+
+# Make Matrix
+nba <- as.matrix(nba)
+
+# Normalized Data
+scaled_nba <- scale(nba)
+
+# Scaled Data Distance
+nba_distance <- dist(as.matrix(scaled_nba))
+
+# Clustering with Normalized data
+nba_cluster <- hclust(nba_distance, method = "average")
+
+# plot
+plot(nba_cluster)
+
+# 4 Means
+clusters_nba = kmeans(scaled_nba, 4)
+
+# plot 
+clusplot(scaled_nba, clusters_nba$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
+```
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+#title{
+margin: auto;
+text-align: center;
+font-size: 45px;
+color: #7F52E8;
+font-family: 'Bitter', serif;
+}
+#desc{
+font-size: 18px;
+font-family: 'Quicksand', sans-serif;
+}
+</style>
