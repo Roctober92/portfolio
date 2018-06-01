@@ -5,7 +5,7 @@
 
 <p id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></p>
 
-<p id="machine" class="website">Machine Learning</p>
+<p class="website"><a id="machine" class="website" href="topics/ml/index.html" target="_blank">Machine Learning</a></p>
 
 <p id="consult" class="website">Consulting <i>(link forthcoming)</i></p>
 
