@@ -65,7 +65,7 @@ plot(scale_cluster)
 
 <br><br>
 
-```{rr, message=FALSE, echo=FALSE, warning=FALSE, fig.width=10, fig.height=7}
+```{r, message=FALSE, echo=FALSE, warning=FALSE, fig.width=10, fig.height=7}
 # Take area away
 st_data <- data.frame(states_data) # matrix to DF
 states <- st_data %>% 
@@ -86,7 +86,7 @@ plot(sin_area_clusters)
 
 <br><br>
 
-The Dendrogram for the data without the <i>area</i> column is in fact very different from the former two. For example, Alaska no longer is by itself for most of the grouping, but instad California and New York form the distant cluster.
+The Dendrogram for the data without the <i>area</i> column is in fact very different from the former two. For example, <strong>Alaska</strong> no longer is by itself from most of the grouping. This is a representation of the other attributes having more pull.
 
 ## K means
 
