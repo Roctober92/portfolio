@@ -9,15 +9,6 @@
 <h1 id="linkedin"><a href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
 
 
-<div class="flag">
-  ![](pics/arg_flag.png)
-</div>
-
-<div class="rain">
-  ![](pics/rain.png)
-</div>
-
-
 
 
 <style>
@@ -44,16 +35,5 @@ font-size: 40px;
 font-family: 'Nanum Gothic', sans-serif;
 color: #0077B5
 }
-.flag{
-height: 200px;
-width: 200px;
-margin-top: -9em;
-margin-left: 4em;
-}
-.rain{
-height: 300px;
-width: 300px;
-margin-top: -16em;
-margin-left: 47em;
-}
+
 </style>
