@@ -18,8 +18,17 @@ library(cluster)
 states_data <- state.x77
 ```
 
+<br><br>
 
-```{r}
+<p id="desc">In the following dendrogram, you can see how <strong>Alaska</strong> and <strong>Texas</strong> had outlier distances compared to the rest, probably because <i>area</i> is an attribute. Some of the best insights can be taken form the smallest of the groups, or the clusters at the bottom. For example, it believes that <strong>Colorado</strong>, <strong>Oregon</strong>, and <strong>Wyoming</strong> are all similar, and it would be up to us the find the interpretation, based off the attributes, to see why.</p>
+
+<br><br>
+
+<p id="desc">Since <i>area</i> probably had a large influence in the attribute distance calculations, we are going to normalize the attributes, which will make <i>area</i> only as influencial as the rest.</p>
+
+<br><br>
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE, fig.width=10, fig.height=7}
 # Compute distance matrix
 distance = dist(as.matrix(states_data))
 
@@ -28,7 +37,15 @@ hc <- hclust(distance, method = "average")
 
 # plot
 plot(hc)
+```
 
+<br><br>
+
+<p id="desc">Since <i>area</i> probably had a large influence in the attribute distance calculations, we are going to normalize the attributes, which will make <i>area</i> only as influencial as the rest.</p>
+
+<br><br>
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE, fig.width=10, fig.height=7}
 # Normalized Data
 scaled_data <- scale(states_data)
 
@@ -42,13 +59,14 @@ scale_cluster <- hclust(scale_distance, method = "average")
 plot(scale_cluster)
 ```
 
-The normalized data has more clusters at the first level than the non-normalized data. The non-normalized data clusters more groups right away.
+<br><br>
 
-Now taking Area away ...
+<p id="desc">The normalized data has more clusters at the first level than the non-normalized data. The non-normalized data clusters more groups right away. You can also observe that <strong>Alaska</strong> and <strong>Texas</strong> are still considered far away from any other state, or even first few clusters.<br><br>Maybe to give an even better clustering of the data, we will take away areas as an attribute.</p>
 
-```{r}
+<br><br>
+
+```{rr, message=FALSE, echo=FALSE, warning=FALSE, fig.width=10, fig.height=7}
 # Take area away
-
 st_data <- data.frame(states_data) # matrix to DF
 states <- st_data %>% 
   select(-Area)
@@ -65,6 +83,8 @@ sin_area_clusters <- hclust(sin_area_distance, method = "average")
 plot(sin_area_clusters)
 
 ```
+
+<br><br>
 
 The Dendrogram for the data without the <i>area</i> column is in fact very different from the former two. For example, Alaska no longer is by itself for most of the grouping, but instad California and New York form the distant cluster.
 
