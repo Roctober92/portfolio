@@ -1,10 +1,8 @@
-<h1 id="library">Data Science Library</h1>
+<p id="library">Data Science Library</p>
+<p id="name">by Andrew Wolfe</p>
+<p id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></p>
 
-<h1 id="name">by Andrew Wolfe</h1>
-
-<h1 id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
-
-<h1 id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></h1>
+<p id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></p>
 
 <p id="machine" class="website">Machine Learning</p>
 
