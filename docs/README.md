@@ -1,5 +1,6 @@
 <p id="library">Data Science Portfolio</p>
 <p id="name">by Andrew Wolfe</p>
+<br>
 <p id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></p>
 
 <p id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></p>
