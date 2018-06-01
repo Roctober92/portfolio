@@ -10,15 +10,29 @@ library(lubridate)
 
 <p id="title">Machine Learning</p>
 
+<br><br>
+
+<p id="method">Clustering In R</p>
+
 
 
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 #title{
 margin: auto;
 text-align: center;
-font-size: 70px;
-color: skyblue;
+font-size: 85px;
+color: #EECA38;
+font-family: 'Bitter', serif;
+}
+#method{
+margin: auto;
+text-align: center;
+font-size: 40px;
+color: #7F52E8;
+font-family: 'Quicksand', sans-serif;
 }
 </style>
 
