@@ -6,27 +6,15 @@
 
 <h1 id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
 
-<br>
-
 <h1 id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></h1>
-
-<br>
 
 <p id="machine" class="website">Machine Learning</p>
 
-<br>
-
 <p id="consult" class="website">Consulting <i>(link forthcoming)</i></p>
-
-<br>
 
 <p id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></p>
 
-<br>
-
 <p id="model" class="website">2018 COMAP Math Modeling Competition</p>
-
-<br>
 
 <p id="math335" class="website">Data Visualization Examples</p>
 
