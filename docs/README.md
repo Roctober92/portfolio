@@ -1,8 +1,6 @@
 <h1 id="library">Data Science Library</h1>
 
-<h1 id="name">Andrew Wolfe</h1>
-
-<br><br>
+<h1 id="name">by Andrew Wolfe</h1>
 
 <h1 id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></h1>
 
