@@ -20,7 +20,7 @@ library(lubridate)
 
 <br><br>
 
-<p id="method"><a id="method" class="neural" href="ensemble_summary.html" target="_blank" >Neural Network</a></p>
+<p id="method"><a id="method" class="neural" href="neural.html" target="_blank" >Neural Network</a></p>
 
 
 

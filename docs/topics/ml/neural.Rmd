@@ -7,3 +7,20 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
+<p id = "title">Neural Network</p>
+
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+#title{
+margin: auto;
+text-align: center;
+font-size: 80px;
+color: #195D1C;
+font-family: 'Bitter', serif;
+}
+
+
+</style>
