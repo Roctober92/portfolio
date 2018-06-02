@@ -1,0 +1,145 @@
+Accuracy,Algorithm,Kfolds,Type,Row,Pred,Target,guessing_chance,name
+0.98,Decision Tree,5,C,3195,36,2,0.5,Tree
+0.98,Decision Tree,8,C,3195,36,2,0.5,Tree
+0.93,Random Forest: 5 trees,5,C,3195,36,2,0.5,Forest_5
+0.92,Random Forest: 8 trees,5,C,3195,36,2,0.5,Forest_8
+0.92,Random Forest: 5 trees,8,C,3195,36,2,0.5,Forest_5
+0.92,Random Forest: 8 trees,8,C,3195,36,2,0.5,Forest_8
+0.84,SVM,8,C,3195,36,2,0.5,SVM
+0.83,SVM,5,C,3195,36,2,0.5,SVM
+0.83,KNN with 8 neighbors,8,C,3195,36,2,0.5,KNN_8
+0.82,KNN with 4 neighbors,5,C,3195,36,2,0.5,KNN_4
+0.82,KNN with 8 neighbors,5,C,3195,36,2,0.5,KNN_8
+0.82,KNN with 4 neighbors,8,C,3195,36,2,0.5,KNN_4
+0.79,Neural Network with 0.18 learning rate and 100 epochs,5,C,3195,36,2,0.5,NN_.18_100
+0.79,Neural Network with 0.12 learning rate and 150 epochs,5,C,3195,36,2,0.5,NN_.12_150
+0.78,Neural Network with 0.12 learning rate and 150 epochs,8,C,3195,36,2,0.5,NN_.12_150
+0.74,Neural Network with 0.18 learning rate and 100 epochs,8,C,3195,36,2,0.5,NN_.18_100
+0.71,KNN with 4 neighbors,5,N,767,8,2,0.5,KNN_4
+0.71,KNN with 8 neighbors,5,N,767,8,2,0.5,KNN_8
+0.7,Neural Network with 0.12 learning rate and 150 epochs,5,N,767,8,2,0.5,NN_.12_150
+0.7,Random Forest: 8 trees,5,N,767,8,2,0.5,Forest_8
+0.7,Neural Network with 0.18 learning rate and 100 epochs,5,C,1728,6,4,0.25,NN_.18_100
+0.7,Neural Network with 0.12 learning rate and 150 epochs,5,C,1728,6,4,0.25,NN_.12_150
+0.7,Neural Network with 0.18 learning rate and 100 epochs,8,C,1728,6,4,0.25,NN_.18_100
+0.7,Neural Network with 0.12 learning rate and 150 epochs,8,C,1728,6,4,0.25,NN_.12_150
+0.7,Random Forest: 8 trees,8,N,767,8,2,0.5,Forest_8
+0.69,Neural Network with 0.18 learning rate and 100 epochs,5,N,767,8,2,0.5,NN_.18_100
+0.68,Random Forest: 5 trees,5,N,767,8,2,0.5,Forest_5
+0.67,Naive Bayes,5,N,767,8,2,0.5,NB
+0.67,SVM,5,N,767,8,2,0.5,SVM
+0.67,Naive Bayes,8,C,1728,6,4,0.25,NB
+0.67,KNN with 4 neighbors,8,N,767,8,2,0.5,KNN_4
+0.67,Neural Network with 0.18 learning rate and 100 epochs,8,N,767,8,2,0.5,NN_.18_100
+0.67,SVM,8,N,767,8,2,0.5,SVM
+0.67,Neural Network with 0.12 learning rate and 150 epochs,8,N,767,8,2,0.5,NN_.12_150
+0.66,Naive Bayes,5,C,1728,6,4,0.25,NB
+0.66,Naive Bayes,8,N,767,8,2,0.5,NB
+0.66,Random Forest: 5 trees,8,N,767,8,2,0.5,Forest_5
+0.65,Decision Tree,5,N,767,8,2,0.5,Tree
+0.65,KNN with 8 neighbors,8,N,767,8,2,0.5,KNN_8
+0.63,Naive Bayes,5,C,3195,36,2,0.5,NB
+0.63,Decision Tree,8,N,767,8,2,0.5,Tree
+0.62,Naive Bayes,8,C,3195,36,2,0.5,NB
+0.58,SVM,5,N,4176,8,6,0.17,SVM
+0.58,KNN with 8 neighbors,5,N,4176,8,6,0.17,KNN_8
+0.58,SVM,8,N,4176,8,6,0.17,SVM
+0.58,KNN with 8 neighbors,8,N,4176,8,6,0.17,KNN_8
+0.57,Decision Tree,8,C,5000,5,10,0.1,Tree
+0.55,SVM,5,C,1728,6,4,0.25,SVM
+0.55,KNN with 8 neighbors,5,C,1728,6,4,0.25,KNN_8
+0.55,KNN with 4 neighbors,5,N,4176,8,6,0.17,KNN_4
+0.55,Decision Tree,5,C,5000,5,10,0.1,Tree
+0.54,Random Forest: 5 trees,5,C,1728,6,4,0.25,Forest_5
+0.54,Random Forest: 8 trees,5,C,1728,6,4,0.25,Forest_8
+0.54,Random Forest: 5 trees,5,N,4176,8,6,0.17,Forest_5
+0.54,Random Forest: 8 trees,5,N,4176,8,6,0.17,Forest_8
+0.54,KNN with 4 neighbors,8,N,4176,8,6,0.17,KNN_4
+0.54,Random Forest: 5 trees,8,N,4176,8,6,0.17,Forest_5
+0.54,Random Forest: 8 trees,8,N,4176,8,6,0.17,Forest_8
+0.54,KNN with 8 neighbors,8,C,1728,6,4,0.25,KNN_8
+0.53,Decision Tree,5,C,1728,6,4,0.25,Tree
+0.53,SVM,8,C,1728,6,4,0.25,SVM
+0.53,Random Forest: 5 trees,8,C,1728,6,4,0.25,Forest_5
+0.52,Neural Network with 0.12 learning rate and 150 epochs,5,N,4176,8,6,0.17,NN_.12_150
+0.52,Neural Network with 0.12 learning rate and 150 epochs,8,N,4176,8,6,0.17,NN_.12_150
+0.52,Decision Tree,8,C,1728,6,4,0.25,Tree
+0.52,Random Forest: 8 trees,8,C,1728,6,4,0.25,Forest_8
+0.51,Decision Tree,5,N,4176,8,6,0.17,Tree
+0.51,Neural Network with 0.18 learning rate and 100 epochs,8,N,4176,8,6,0.17,NN_.18_100
+0.51,Decision Tree,8,N,4176,8,6,0.17,Tree
+0.51,Random Forest: 8 trees,8,C,5000,5,10,0.1,Forest_8
+0.5,Neural Network with 0.18 learning rate and 100 epochs,5,N,4176,8,6,0.17,NN_.18_100
+0.5,Random Forest: 5 trees,8,C,5000,5,10,0.1,Forest_5
+0.49,Random Forest: 5 trees,5,C,5000,5,10,0.1,Forest_5
+0.49,Random Forest: 8 trees,5,C,5000,5,10,0.1,Forest_8
+0.48,KNN with 4 neighbors,5,C,1728,5,4,0.25,KNN_4
+0.48,Naive Bayes,5,N,4176,8,6,0.17,NB
+0.48,Naive Bayes,8,N,4176,8,6,0.17,NB
+0.48,KNN with 4 neighbors,8,C,5000,5,10,0.1,KNN_4
+0.48,KNN with 4 neighbors,8,C,1728,6,4,0.25,KNN_4
+0.47,KNN with 4 neighbors,5,C,5000,5,10,0.1,KNN_4
+0.46,SVM,5,C,5000,5,10,0.1,SVM
+0.46,SVM,8,C,5000,5,10,0.1,SVM
+0.46,KNN with 8 neighbors,8,C,5000,5,10,0.1,KNN_8
+0.45,KNN with 8 neighbors,5,C,5000,5,10,0.1,KNN_8
+0.42,SVM,8,C,5000,5,4,0.25,SVM
+0.41,SVM,5,C,5000,5,4,0.25,SVM
+0.4,Random Forest: 5 trees,5,C,5000,5,4,0.25,Forest_5
+0.4,Random Forest: 5 trees,8,C,5000,5,4,0.25,Forest_5
+0.4,KNN with 8 neighbors,8,C,5000,5,4,0.25,KNN_8
+0.4,Random Forest: 8 trees,8,C,5000,5,4,0.25,Forest_8
+0.39,KNN with 8 neighbors,5,C,5000,5,4,0.25,KNN_8
+0.39,Random Forest: 8 trees,5,C,5000,5,4,0.25,Forest_8
+0.39,Decision Tree,8,C,5000,5,4,0.25,Tree
+0.38,KNN with 4 neighbors,5,C,5000,5,4,0.25,KNN_4
+0.38,Decision Tree,5,C,5000,5,4,0.25,Tree
+0.38,KNN with 4 neighbors,8,C,5000,5,4,0.25,KNN_4
+0.37,Neural Network with 0.18 learning rate and 100 epochs,5,C,5000,5,4,0.25,NN_.18_100
+0.37,Naive Bayes,5,C,5000,5,4,0.25,NB
+0.37,Neural Network with 0.12 learning rate and 150 epochs,5,C,5000,5,4,0.25,NN_.12_150
+0.37,Neural Network with 0.18 learning rate and 100 epochs,8,C,5000,5,4,0.25,NN_.18_100
+0.37,Naive Bayes,8,C,5000,5,4,0.25,NB
+0.37,Neural Network with 0.12 learning rate and 150 epochs,8,C,5000,5,4,0.25,NN_.12_150
+0.35,Neural Network with 0.18 learning rate and 100 epochs,5,C,5000,5,10,0.1,NN_.18_100
+0.35,Neural Network with 0.12 learning rate and 150 epochs,5,C,5000,5,10,0.1,NN_.12_150
+0.35,Neural Network with 0.18 learning rate and 100 epochs,8,C,5000,5,10,0.1,NN_.18_100
+0.35,Neural Network with 0.12 learning rate and 150 epochs,8,C,5000,5,10,0.1,NN_.12_150
+0.13,Neural Network with 0.18 learning rate and 100 epochs,5,C,2724,4,59,0.02,NN_.18_100
+0.13,Neural Network with 0.12 learning rate and 150 epochs,5,C,2724,4,59,0.02,NN_.12_150
+0.13,Neural Network with 0.18 learning rate and 100 epochs,8,C,2724,4,59,0.02,NN_.18_100
+0.13,Neural Network with 0.12 learning rate and 150 epochs,8,C,2724,4,59,0.02,NN_.12_150
+0.11,Neural Network with 0.18 learning rate and 100 epochs,5,C,945,3,15,0.07,NN_.18_100
+0.11,Neural Network with 0.12 learning rate and 150 epochs,5,C,945,3,15,0.07,NN_.12_150
+0.11,Neural Network with 0.12 learning rate and 150 epochs,8,C,945,3,15,0.07,NN_.12_150
+0.1,Neural Network with 0.18 learning rate and 100 epochs,8,C,945,3,15,0.07,NN_.18_100
+0.08,Naive Bayes,5,C,945,3,15,0.07,NB
+0.08,SVM,5,C,945,3,15,0.07,SVM
+0.08,Naive Bayes,8,C,945,3,15,0.07,NB
+0.07,SVM,8,C,945,3,15,0.07,SVM
+0.06,KNN with 8 neighbors,5,C,945,3,15,0.07,KNN_8
+0.05,KNN with 4 neighbors,5,C,945,3,15,0.07,KNN_4
+0.05,Decision Tree,5,C,945,3,15,0.07,Tree
+0.05,Random Forest: 8 trees,5,C,945,3,15,0.07,Forest_8
+0.05,KNN with 8 neighbors,5,C,2724,4,59,0.02,KNN_8
+0.05,KNN with 4 neighbors,8,C,945,3,15,0.07,KNN_4
+0.05,KNN with 8 neighbors,8,C,945,3,15,0.07,KNN_8
+0.04,Random Forest: 5 trees,5,C,945,3,15,0.07,Forest_5
+0.04,KNN with 4 neighbors,5,C,2724,4,59,0.02,KNN_4
+0.04,SVM,5,C,2724,4,59,0.02,SVM
+0.04,Naive Bayes,5,C,5000,6,10,0.1,NB
+0.04,Decision Tree,8,C,945,3,15,0.07,Tree
+0.04,Random Forest: 5 trees,8,C,945,3,15,0.07,Forest_5
+0.04,Random Forest: 8 trees,8,C,945,3,15,0.07,Forest_8
+0.03,Naive Bayes,5,C,2724,4,59,0.02,NB
+0.03,Naive Bayes,8,C,5000,5,10,0.1,NB
+0.03,KNN with 4 neighbors,8,C,2724,4,59,0.02,KNN_4
+0.03,SVM,8,C,2724,4,59,0.02,SVM
+0.03,KNN with 8 neighbors,8,C,2724,4,59,0.02,KNN_8
+0.02,Decision Tree,5,C,2724,4,59,0.02,Tree
+0.02,Random Forest: 5 trees,5,C,2724,4,59,0.02,Forest_5
+0.02,Random Forest: 8 trees,5,C,2724,4,59,0.02,Forest_8
+0.02,Naive Bayes,8,C,2724,4,59,0.02,NB
+0.02,Random Forest: 5 trees,8,C,2724,4,59,0.02,Forest_5
+0.01,Decision Tree,8,C,2724,4,59,0.02,Tree
+0.01,Random Forest: 8 trees,8,C,2724,4,59,0.02,Forest_8

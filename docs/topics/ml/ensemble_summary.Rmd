@@ -11,19 +11,42 @@ library(tidyverse)
 
 <br><br>
 
+<p id="desc">Ensemble is really useful. It's going through several machine learning algorithms and parameters over 1 or many datasets. We do this to see which algorithms may perform better for a certain dataset, or certain types of datasets.<br><br>I have attached a certain ensemble I assembled with a team of 3 people, which report and code I created. In this ensemble, we analyzed 8 different data sets with 6 different algorithms, 3 of which we had 2 sets of parameters, and did every algorithm with 2 different <i>cross validation</i> amounts, making 18 total algorithm and dataset combinations.</p>
+
+<br><br>
+
+<p id="section"><a id="section" href="ensemble.Rmd">Ensemble Report</a></p>
+
+<br><br>
+
+<p id="desc">The purpose of the report was to visualize how the different ensembles perform. Some of the insights we took away was that the <strong>Naive Bayes</strong> algorithm varied in accuracy, <strong>row amount</strong> wasn't a factor, the amount of <strong>unique targets</strong> strong affects the accuracy across all algorithms, and for the most part the algorithms performed about the same across all datasets, which attests to the <strong>no free lunch theory</strong>, which states that across all possible datasets, all algorithsm perform about the same.</p>
 
 
-
+<strong></strong>
 
 
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 #title{
 margin: auto;
 text-align: center;
 font-family: 'Bitter', serif;
 color: #183288;
 font-size: 80px;
+}
+#desc{
+font-size: 18px;
+font-family: 'Quicksand', sans-serif;
+}
+#section{
+margin: auto;
+text-align: center;
+font-size: 45px;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+color: #106414;
+letter-spacing: 5px;
 }
 </style>

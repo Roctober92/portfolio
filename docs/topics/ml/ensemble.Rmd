@@ -8,7 +8,7 @@ library(tidyverse)
 library(DT)
 
 # Import Data
-data <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Machine Learning/r_ensemble.csv")
+data <- read_csv("r_ensemble.csv")
 ```
 
 <h1 id="title">Ensemble Exploration<h1>
