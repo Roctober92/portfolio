@@ -27,17 +27,29 @@ library(tidyverse)
 
 <br><br>
 
-<p id="section"><a id="section" href="neural_report.html" target="_blank">R Data Preparation</a></p>
+<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/na_knn.R" target="_blank">R Data Preparation</a></p>
 
 <br><br>
 
-<p id="section"><a id="section" href="neural_report.html" target="_blank">Python Code</a></p>
+<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/temp_regression.py" target="_blank">Python Code</a></p>
 
 <br><br>
 
-<p id="section"><a id="section" href="neural_report.html" target="_blank">Replace With Predictions</a></p>
+<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/na_temp_replace.R" target="_blank">Replace With Predictions</a></p>
 
+<br><br>
 
+<p id = "desc">The regression created predictions based off of combinations of elevation and month, or in other words, we made predictions for every month of every elevation. But before deciding to do that, as the <i>python</i> script shows, I validated the good data by proper splitting and randomizing techniques, and obtained a .85 correlation from predictions to targets, demonstrating <i>supervised learning</i><br><br>The following boxplot shows the changed re-predicted observations among the originally deemed "good" observations.</p>
+
+<br><br>
+
+<center>
+
+![](/Users/Wolfe/portfolio_site/docs/pics/high_box.png)
+
+</center>
+
+<br><br>
 
 
 

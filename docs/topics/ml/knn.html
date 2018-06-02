@@ -140,9 +140,25 @@ As part of my senior project analysis with <i>Colorado Climate Data</i> provided
 As seen from above, the black and red dots show the supposed outliers, whose values we will re-predict with the KNN regression method.<br><br>With KNN regression we can take the middle 98% or so of the data (which we believe to be a lot more accurate readings), and use that to find rows in the corrupted data to with like attributes, and estimate what should have been it’s actual value.<br><br>The following with be provided to reference: the <i>r</i> script used to format the data, the <i>python</i> script used to run the actual regression, and the <i>r</i> script used to do some visualization and data wrangling. Keep in mind that I also estimated values for <i>other problems</i> I also had in the data.
 </p>
 <p><br><br></p>
+<p id="section">
+<a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/na_knn.R" target="_blank">R Data Preparation</a>
+</p>
+<p><br><br></p>
+<p id="section">
+<a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/temp_regression.py" target="_blank">Python Code</a>
+</p>
+<p><br><br></p>
+<p id="section">
+<a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/na_temp_replace.R" target="_blank">Replace With Predictions</a>
+</p>
+<p><br><br></p>
+<p id="desc">
+The regression created predictions based off of combinations of elevation and month, or in other words, we made predictions for every month of every elevation. But before deciding to do that, as the <i>python</i> script shows, I validated the good data by proper splitting and randomizing techniques, and obtained a .85 correlation from predictions to targets, showing true <i>supervised learning</i> form.
+</p>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 #title{
 margin: auto;
 text-align: center;
@@ -153,6 +169,14 @@ font-family: 'Bitter', serif;
 #desc{
 font-size: 20px;
 font-family: 'Quicksand', sans-serif;
+}
+#section{
+margin: auto;
+text-align: center;
+font-size: 45px;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+color: #106414;
+letter-spacing: 5px;
 }
 
 </style>
