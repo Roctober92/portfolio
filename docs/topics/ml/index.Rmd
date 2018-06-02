@@ -22,6 +22,9 @@ library(lubridate)
 
 <p id="method"><a id="method" class="neural" href="neural.html" target="_blank" >Neural Network</a></p>
 
+<br><br>
+
+<p id="method"><a id="method" class="knn" href="knn.html" target="_blank" >KNN Regression</a></p>
 
 
 <style>
@@ -49,6 +52,9 @@ color: #183288;
 }
 .neural{
 color: #195D1C;
+}
+.knn{
+color: #E54A3B;
 }
 </style>
 

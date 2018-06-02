@@ -1,0 +1,23 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+<p id = "title">KNN Regression</p>
+
+<br><br>
+
+
+
+<style>
+#title{
+margin: auto;
+text-align: center;
+}
+
+
+</style>
