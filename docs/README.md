@@ -11,9 +11,9 @@
 
 <p id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></p>
 
-<p id="model" class="website">2018 COMAP Math Modeling Competition</p>
+<p id="model" class="website">2018 COMAP Math Modeling Competition <i>(link forthcoming)</i></p>
 
-<p id="math335" class="website">Data Visualization Examples</p>
+<p id="math335" class="website">Data Visualization Examples <i>(link forthcoming)</i></p>
 
 
 
