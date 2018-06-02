@@ -19,15 +19,21 @@ library(tidyverse)
 
 <br><br>
 
-<p id = "desc">Neural networks have many variations and depths of complexity, but the underlying idea is that you can pass through rows of data through layers of nodes, whose layers are connected by weights. The final layers' node is the actual target, and the error we get while guessing helps modify the weights for the next row. Eventually after passing through the entire dataset several times, the weights could be optimized to such a way to best predict the targets for the dataset they were trained on.<br><br>It's another prediction algorithm, just like KNN or Support Vector Machine, which can help predict either a value (regression), or a category, like predicting if a customer is likely to return or not.</p>
+<p id = "desc">Neural networks have many variations and depths of complexity, but the underlying idea is that you can pass through rows of data through layers of nodes, whose layers are connected by weights. The final layers' node is the actual target, and the error we get while guessing helps modify the weights for the next row. Eventually after passing through the entire dataset several times, the weights could be optimized to such a way to best predict the targets for the dataset they were trained on.<br><br>It's another prediction algorithm, just like KNN or Support Vector Machine, which can help predict either a value (regression), or a category, i.e predicting if a customer is likely to return or not.<br><br>The following is an example of a implementation I did from scratch, as a school assignment, and the following report given. The implementation should work, but as seen in the report, there may have been a problem in the first dataset. However, this was just an assignment, and I'm sure already created implementations are more widely used.</p>
 
+<br><br>
 
+<p id="section"><a id="section" href="" target="_blank">Code</a></p>
 
+<br><br>
+
+<p id="section"><a id="section" href="" target="_blank">Report</a></p>
 
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 #title{
 margin: auto;
 text-align: center;
@@ -42,5 +48,13 @@ width: 200px;
 #desc{
 font-size: 18px;
 font-family: 'Quicksand', sans-serif;
+}
+#section{
+margin: auto;
+text-align: center;
+font-size: 45px;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+color: #106414;
+letter-spacing: 5px;
 }
 </style>

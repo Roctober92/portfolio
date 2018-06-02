@@ -1,0 +1,98 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<h1 id = "title">Neural Network Analysis</h1>
+
+<h2 id = "name">By Andrew Wolfe</h2>
+
+<p id = "question">Describe your overall approach to implementing the algorithm in code. How are your classes/data structures organized? How do you keep track of the necessary pieces for back-propagation.</p>
+
+<br><br>
+
+<p id = "answer">I created a class/object for both the <i>layers</i> and <i>nodes</i>. The layers had weight initializers for the first data row, as well as a function to give the activations as the inputs for the next layer. Each node as a weight, activation, h value, and clean function.<br><br>For back propogation, I had an array of nodes and errors that I used to access. I would access each node by backwards for-loops</p>
+
+<p id = "question">Describe the part of the assignment that gave you the most trouble, and how you overcame it.</p>
+
+<br><br>
+
+<p id = "answer">The most trouble came from troubleshooting the last node layer weights, and updating them. I don't quite rememeber what the problem was, but I had to debug with print statements just about everywhere.<br><br> But it also has given me trouble trying to find a good combination of learning rates and epoch amounts that work.</p>
+
+<p id = "question">Produce at least one graph to show the training progress for the Iris dataset.</p>
+
+<br><br>
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Machine Learning/iris.png)
+</center>
+
+<br><br>
+
+<p id = "question">Compare your results on the Iris dataset to those of an existing implementation.</p>
+
+<br><br>
+
+<p id = "answer">Sometimes the existing implementation will work with the parameters I give it, but it will seldom work at the same time as my implementation. As seen above, it may have worked, but the error rate staying at 100% for so long is a little puzzling. Even random guessing should be an error around 60%. But on the run featured above, the existing implementation was 33% accuracte after 200 epochs. But sometimes it will guess around 80-90% with the right parameters.</p>
+
+<br><br>
+
+<p id = "question">Produce at least one graph to show the training progress for the Diabetes dataset.</p>
+
+<br><br>
+
+<center>
+
+![](/Users/Wolfe/Desktop/Winter 2018/Machine Learning/pima.png)
+
+</center>
+
+<br><br>
+
+<p id = "question">Compare your results on the Diabetes dataset to those of an existing implementation</p>
+
+<br><br>
+
+<p id = "answer">At best, my implementation had about 69% accuracy on epoch 210, whereas the existing implementation had an accuracy of 71%, so very close! It seemed to work better with the Pima dataset.</p>
+
+<br><br>
+
+<p id = "question">Please state which category you feel best describes your assignment and give a 1-2 sentence justification for your choice</p>
+
+<br><br>
+
+<p id = "answer">This one is hard to judge, just because it always ran (no errors in the code), but the errors didn't always make sense with the Iris dataset. After all of the work, I would say a C+ (between C and B). Everything was met, you can input layer, learning rate, node, and epoch amounts, and it will run. Just for some reason it doesn't always work right with the Iris dataset, but with Pima it works just fine.</p>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+#title{
+margin: auto;
+text-align: center;
+font-family: 'Passion One', cursive;
+color: darkblue;
+font-size: 60px;
+}
+#name {
+margin: auto;
+text-align: center;
+font-family: 'Poiret One', cursive;
+color: darkgoldenrod;
+font-size: 25px;
+}
+#question{
+font-family: 'Pathway Gothic One', sans-serif;
+font-size: 18px;
+}
+#answer{
+font-size: 18px;
+font-family: 'Poppins', sans-serif;
+}
+</style>
