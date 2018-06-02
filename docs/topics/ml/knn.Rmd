@@ -27,6 +27,15 @@ library(tidyverse)
 
 <br><br>
 
+<p id="section"><a id="section" href="neural_report.html" target="_blank">R Data Preparation</a></p>
+
+<br><br>
+
+<p id="section"><a id="section" href="neural_report.html" target="_blank">Python Code</a></p>
+
+<br><br>
+
+<p id="section"><a id="section" href="neural_report.html" target="_blank">Replace With Predictions</a></p>
 
 
 
@@ -36,6 +45,7 @@ library(tidyverse)
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 #title{
 margin: auto;
 text-align: center;
@@ -46,6 +56,14 @@ font-family: 'Bitter', serif;
 #desc{
 font-size: 20px;
 font-family: 'Quicksand', sans-serif;
+}
+#section{
+margin: auto;
+text-align: center;
+font-size: 45px;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+color: #106414;
+letter-spacing: 5px;
 }
 
 </style>
