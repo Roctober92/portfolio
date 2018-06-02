@@ -15,7 +15,7 @@ library(tidyverse)
 
 <br><br>
 
-<p id="section"><a id="section" href="ensemble.html">Ensemble Report</a></p>
+<p id="section"><a id="section" href="ensemble.html" target="_blank">Ensemble Report</a></p>
 
 <br><br>
 
