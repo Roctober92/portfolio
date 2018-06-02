@@ -130,7 +130,7 @@ clusters = kmeans(scaled_data, 3)
 
 <br><br>
 
-```{r, echo=FALSE, message=FALSE, fig.width=10}
+```{r, message=FALSE, fig.width=10}
 table <- NULL
 
 for (k in 1:25){

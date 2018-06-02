@@ -18,6 +18,9 @@ library(lubridate)
 
 <p id="method"><a id="method" class="ensemble" href="ensemble_summary.html" target="_blank" >Ensemble Learning</a></p>
 
+<br><br>
+
+<p id="method"><a id="method" class="neural" href="ensemble_summary.html" target="_blank" >Neural Network</a></p>
 
 
 
@@ -42,6 +45,9 @@ color: #7F52E8;
 }
 .ensemble{
 color: #183288;
+}
+.neural{
+color: #195D1C;
 }
 </style>
 
