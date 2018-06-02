@@ -23,11 +23,11 @@ library(tidyverse)
 
 <br><br>
 
-<p id="section"><a id="section" href="" target="_blank">Code</a></p>
+<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/neural_network.py" target="_blank">Code</a></p>
 
 <br><br>
 
-<p id="section"><a id="section" href="" target="_blank">Report</a></p>
+<p id="section"><a id="section" href="neural_report.html" target="_blank">Report</a></p>
 
 
 <style>

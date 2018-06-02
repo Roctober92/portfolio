@@ -60,14 +60,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <p id = "answer">At best, my implementation had about 69% accuracy on epoch 210, whereas the existing implementation had an accuracy of 71%, so very close! It seemed to work better with the Pima dataset.</p>
 
-<br><br>
-
-<p id = "question">Please state which category you feel best describes your assignment and give a 1-2 sentence justification for your choice</p>
-
-<br><br>
-
-<p id = "answer">This one is hard to judge, just because it always ran (no errors in the code), but the errors didn't always make sense with the Iris dataset. After all of the work, I would say a C+ (between C and B). Everything was met, you can input layer, learning rate, node, and epoch amounts, and it will run. Just for some reason it doesn't always work right with the Iris dataset, but with Pima it works just fine.</p>
-
 <style>
 @import url('https://fonts.googleapis.com/css?family=Passion+One');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
