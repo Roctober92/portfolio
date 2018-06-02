@@ -1,0 +1,174 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Include Libraries
+library(tidyverse)
+library(DT)
+
+# Import Data
+data <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Machine Learning/r_ensemble.csv")
+```
+
+<h1 id="title">Ensemble Exploration<h1>
+
+<br>
+
+<h1 id="names"> Andrew Wolfe | Jeremy Chandler | Ryan Recanzone</h1>
+
+<br><br>
+
+<p id="desc">The following is a visual report of an ensemble of many machine learning algorithms, with different combinations of cross validations, dataset size, data types, and individual algorithm parameters.</p>
+
+<br><br>
+
+<h1 id="subtitle">Data</h1>
+
+<br><br>
+
+```{r, echo = FALSE}
+# Show datatable
+datatable(data, class = 'hover', 
+          options = list(pageLength = nrow(data)/24))
+```
+
+<br><br>
+
+<h1 id="subtitle">Data Type and K-Folds</h1>
+
+<br><br>
+
+```{r, fig.width=10, fig.height=4, fig.align='center', echo=FALSE}
+plot1 <- ggplot(data = data, aes(x = Type, y = Accuracy)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = as.factor(Kfolds))) +
+  theme_bw() +
+  labs(x = "Categorical and Numerical", color = "K Fold Amount") +
+  theme(axis.title = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(1.3)))
+plot1
+```
+
+<br><br>
+
+<h1 id="subtitle">Row Amount</h1>
+
+<br><br>
+
+```{r, fig.width=10, fig.height=4, fig.align='center', echo=FALSE}
+plot2 <- ggplot(data = data, aes(x = Row, y = Accuracy)) +
+  geom_point(aes(color = as.factor(Kfolds))) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  theme_bw() +
+  labs(x = "Amount of Rows", color = "K Fold Amount") +
+  theme(axis.title = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(1.3)))
+plot2
+```
+
+<br><br>
+
+<h1 id="subtitle">Unique Target Amount</h1>
+
+<br><br>
+
+```{r, fig.width=10, fig.height=4, fig.align='center', echo=FALSE}
+plot3 <- ggplot(data = data, aes(x = Target, y = Accuracy)) +
+  geom_point(aes(color = as.factor(Kfolds))) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  theme_bw() +
+  labs(x = "Amount of Unique Targets", color = "K Fold Amount") +
+  theme(axis.title = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(1.3)))
+plot3
+```
+
+<br><br>
+
+<h1 id="subtitle">Algorithm Comparison Against Chance</h1>
+
+<br><br>
+
+```{r, fig.width=10, fig.height=7, fig.align='center', echo=FALSE}
+plot4 <- ggplot(data = data, aes(x = Row, y = Accuracy)) +
+  geom_line(aes(y = guessing_chance), color = "red") +
+  geom_line(color = "black") +
+  facet_wrap(~Algorithm, nrow = 3) +
+  theme_bw() +
+  labs(x = "Amount of Rows", color = "Accuracy | Probability by Chance") +
+  theme(axis.title = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(1.3)))
+plot4
+```
+
+<br><br>
+
+<h1 id="subtitle">Algorithm Comparison</h1>
+
+<br><br>
+
+```{r, fig.width=10, fig.height=9, fig.align='center', echo=FALSE}
+plot5 <- ggplot(data = data, aes(x = Row, y = Accuracy)) +
+  geom_point(aes(color = Algorithm)) +
+  geom_line(aes(color = name, group = name)) +
+  facet_wrap(~Kfolds, nrow = 2) +
+  theme_bw() +
+  labs(x = "Amount of Rows", color = "Algorithm") +
+  theme(axis.title = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(1.3)),
+        legend.position="top")
+plot5
+```
+
+<br><br>
+
+<h1 id="subtitle">Algorithm Comparison</h1>
+
+<br><br>
+
+```{r, fig.width=10, fig.height=4, fig.align='center', echo=FALSE}
+plot6 <- ggplot(data = data, aes(x = name, y = Accuracy)) +
+  geom_boxplot() +
+  geom_jitter(aes(color = Type)) +
+  theme_bw() +
+  labs(x = "Algorithm", color = "Data Type") +
+  theme(axis.title = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(1.3)))
+plot6
+```
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+#title{
+margin: auto;
+text-align: center;
+font-size: 70px;
+font-family: 'Gugi', cursive;
+color: #1A17D1;
+}
+#names{
+margin: auto;
+text-align: center;
+font-size: 30px;
+font-family: 'Raleway', sans-serif;
+color: #2C7607;
+}
+#subtitle{
+margin: auto;
+text-align: center;
+font-size: 50px;
+font-family: 'IBM Plex Sans', sans-serif;
+color: #590B90;
+}
+#desc{
+font-family: 'Muli', sans-serif;
+font-size: 20px;
+font-weight: bold;
+}
+</style>

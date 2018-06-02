@@ -1,0 +1,29 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+<p id="title">Ensemble Learning</p>
+
+<br><br>
+
+
+
+
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+#title{
+margin: auto;
+text-align: center;
+font-family: 'Bitter', serif;
+color: #183288;
+font-size: 80px;
+}
+</style>
