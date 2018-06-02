@@ -11,13 +11,41 @@ library(tidyverse)
 
 <br><br>
 
+<p id = "desc">As part of my senior project analysis with <i>Colorado Climate Data</i> provided by <i>NRCS</i>, I decided to replace some missing values with estimates created from the <strong>KNN regression</strong> provided through <i>SKLEARN</i>.<br><br>In my dataset, I have <i>15 day high temperature</i> averages for 114 stations, many of whose observations had readings which are probably not correct, as shown by the below <i>boxplot.</i></p>
+
+<br><br>
+
+<center>
+
+![](/Users/Wolfe/portfolio_site/docs/pics/high_box.png)
+
+</center>
+
+<br><br>
+
+<p id="desc">As seen from above, the black and red dots show the supposed outliers, whose values we will re-predict with the KNN regression method.<br><br>With KNN regression we can take the middle 98% or so of the data (which we believe to be a lot more accurate readings), and use that to find rows in the corrupted data to with like attributes, and estimate what should have been it's actual value.<br><br>The following with be provided to reference: the <i>r</i> script used to format the data, the <i>python</i> script used to run the actual regression, and the <i>r</i> script used to do some visualization and data wrangling. Keep in mind that I also estimated values for <i>other problems</i> I also had in the data.</p>
+
+<br><br>
+
+
+
+
+
 
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 #title{
 margin: auto;
 text-align: center;
+font-size: 80px;
+color: #E54A3B;
+font-family: 'Bitter', serif;
 }
-
+#desc{
+font-size: 20px;
+font-family: 'Quicksand', sans-serif;
+}
 
 </style>

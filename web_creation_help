@@ -4,6 +4,10 @@
 <br><br>
 , message = FALSE, warning = FALSE, echo = FALSE
 
+<center>
+
+</center>
+
 <style>
 #title{
 margin: auto;
