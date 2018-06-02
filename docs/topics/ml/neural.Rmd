@@ -9,11 +9,25 @@ library(tidyverse)
 
 <p id = "title">Neural Network</p>
 
+<br>
+
+<center>
+<div class = "neural">
+  ![](/Users/Wolfe/portfolio_site/docs/pics/neural.png)
+</div>
+</center>
+
+<br><br>
+
+<p id = "desc">Neural networks have many variations and depths of complexity, but the underlying idea is that you can pass through rows of data through layers of nodes, whose layers are connected by weights. The final layers' node is the actual target, and the error we get while guessing helps modify the weights for the next row. Eventually after passing through the entire dataset several times, the weights could be optimized to such a way to best predict the targets for the dataset they were trained on.<br><br>It's another prediction algorithm, just like KNN or Support Vector Machine, which can help predict either a value (regression), or a category, like predicting if a customer is likely to return or not.</p>
+
+
 
 
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 #title{
 margin: auto;
 text-align: center;
@@ -21,6 +35,12 @@ font-size: 80px;
 color: #195D1C;
 font-family: 'Bitter', serif;
 }
-
-
+.neural{
+height: 200px;
+width: 200px;
+}
+#desc{
+font-size: 18px;
+font-family: 'Quicksand', sans-serif;
+}
 </style>
