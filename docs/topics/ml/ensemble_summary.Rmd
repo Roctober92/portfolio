@@ -21,8 +21,13 @@ library(tidyverse)
 
 <p id="desc">The purpose of the report was to visualize how the different algorithsm perform. We observed that the <strong>Naive Bayes</strong> algorithm varied the most in accuracy, <strong>row amount</strong> wasn't a factor, the amount of <strong>unique targets</strong> strongly affects the accuracy across all algorithms (as expected), and for the most part the algorithms performed about the same across all datasets, which attests to the <strong>no free lunch theory</strong>, which states that across all possible datasets, all algorithms perform about the same.</p>
 
+<br><br>
 
-<strong></strong>
+<p id = "desc">The following Python code was used to create the report above. Notice that the code uses <i>pandas</i> as well as <i>numpy</i> to format the data correctly, as well as import and export. <i>SKLEARN</i> was the main provider of the optimized algorithms.</p>
+
+<br><br>
+
+<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/project_shell.py" target="_blank">Code for Ensemble (Python)</a></p>
 
 
 

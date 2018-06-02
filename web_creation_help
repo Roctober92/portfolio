@@ -1,0 +1,14 @@
+<strong></strong>
+<i></i>
+<p id = ""> </p>
+<br><br>
+, message = FALSE, warning = FALSE, echo = FALSE
+
+<style>
+#title{
+margin: auto;
+text-align: center;
+}
+
+
+</style>
