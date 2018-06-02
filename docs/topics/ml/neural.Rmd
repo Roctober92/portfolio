@@ -27,6 +27,14 @@ library(tidyverse)
 
 <br><br>
 
+<center>
+<div class="png">
+  ![](/Users/Wolfe/portfolio_site/docs/pics/code.png)
+</div>
+</center>
+
+<br><br>
+
 <p id="section"><a id="section" href="neural_report.html" target="_blank">Report</a></p>
 
 
@@ -44,6 +52,11 @@ font-family: 'Bitter', serif;
 .neural{
 height: 200px;
 width: 200px;
+}
+.png{
+border: 5px solid black;
+height: 360px;
+width: 650px;
 }
 #desc{
 font-size: 18px;
