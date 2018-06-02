@@ -11,7 +11,7 @@ library(cluster)
 
 <br><br><br><br>
 
-<p id="desc">Clustering is the ability to link observations together <i>(customers)</i> based on calculated distance, which distance is calculated based on certain attributes <i>(customer's neighborhood, age, etc.)</i> of the data.<br><br><strong>The following </strong>is an example of this in R, where I clustered states based on different attributes: <i>population, income, illiteracy, life expectancy, etc.</i>This was analyzed in two ways: by <i>dendrogram</i>, and through the k-means method. <br><br>Simply, a <i>dendrogram</i> makes small groups of the observations by like attributes, and then groups the groups together to form slightly large groups of the smaller groups. It might look like a March Madness bracket!<br><br>In the K-means method, we decide we want to make an arbitrary amount of centers (k), and then go through an iterative process where we want to put the k center in the middle the observations so that there is a minimum distance between all.<br><br></p>
+<p id="desc">Clustering is the ability to link observations together <i>(customers)</i> based on calculated distance, which distance is calculated based on certain attributes <i>(customer's neighborhood, age, etc.)</i> of the data.<br><br><strong>The following </strong>is an example of this in R, where I clustered states based on different attributes: <i>population, income, illiteracy, life expectancy, etc.</i> This was analyzed in two ways: by <i>dendrogram</i>, and through the k-means method. <br><br>Simply, a <i>dendrogram</i> makes small groups of the observations by like attributes, and then groups the groups together to form slightly large groups of the smaller groups. It might look like a March Madness bracket!<br><br>In the K-means method, we decide we want to make an arbitrary amount of centers (k), and then go through an iterative process where we want to put the k center in the middle the observations so that there is a minimum distance between all.<br><br></p>
 
 ```{r, message=FALSE, echo=FALSE, warning=FALSE}
 # get data
@@ -20,11 +20,15 @@ states_data <- state.x77
 
 <br><br>
 
+<p id="section">Dendrograms</p>
+
+<br><br>
+
 <p id="desc">In the following dendrogram, you can see how <strong>Alaska</strong> and <strong>Texas</strong> had outlier distances compared to the rest, probably because <i>area</i> is an attribute. Some of the best insights can be taken form the smallest of the groups, or the clusters at the bottom. For example, it believes that <strong>Colorado</strong>, <strong>Oregon</strong>, and <strong>Wyoming</strong> are all similar, and it would be up to us the find the interpretation, based off the attributes, to see why.</p>
 
 <br><br>
 
-<p id="desc">Since <i>area</i> probably had a large influence in the attribute distance calculations, we are going to normalize the attributes, which will make <i>area</i> only as influencial as the rest.</p>
+<p id="desc">Since <i>area</i> probably had a large influence in the attribute distance calculations, we are going to normalize the attributes, which will make <i>area</i> only as influential as the rest.</p>
 
 <br><br>
 
@@ -41,7 +45,7 @@ plot(hc)
 
 <br><br>
 
-<p id="desc">Since <i>area</i> probably had a large influence in the attribute distance calculations, we are going to normalize the attributes, which will make <i>area</i> only as influencial as the rest.</p>
+<p id="desc">Since <i>area</i> probably had a large influence in the attribute distance calculations, we are going to normalize the attributes, which will make <i>area</i> only as influential as the rest.</p>
 
 <br><br>
 
@@ -86,28 +90,47 @@ plot(sin_area_clusters)
 
 <br><br>
 
-The Dendrogram for the data without the <i>area</i> column is in fact very different from the former two. For example, <strong>Alaska</strong> no longer is by itself from most of the grouping. This is a representation of the other attributes having more pull.
+<p id="desc">The Dendrogram for the data without the <i>area</i> column is in fact very different from the former two. For example, <strong>Alaska</strong> no longer is by itself from most of the grouping. This is a representation of the other attributes having more pull.</p>
 
-## K means
+<br><br>
 
-```{r}
+<p id="section">K-Means</p>
+
+<br><br>
+
+<p id="desc">The following is the k-means output in R. I arbitrarily selected that we will have <strong>3</strong> centers, 3 being <strong>K</strong>.<br><br>You can see the attributes included, as well as their mean values within each cluster. This way you can see how each cluster was different from the others numerically. We normalized to include a <i>(-1 to 1)</i> interval for our numbers, so that's why there are negatives.<br><br>You can also see which group each state was in, as well as the variability within each states, shown by the <i>sum of squares</i>.</p>
+
+<br><br>
+
+```{r, echo=FALSE, message=FALSE}
 # get clusters using normalized data
 clusters = kmeans(scaled_data, 3)
 (clusters)
 ```
 
-The size of the 3 clusters:
+<br><br>
 
-* 24
-* 15
-* 11
+<p id="desc">The size of the 3 clusters:</p>
 
-The means are affected and determined by the states grouped within.
-For example the group 2 area is so much different from the other two because it was grouped with Alaska, who's areas is by far the greatest between all states.
+* 24 (group 2)
+* 15 (group 3)
+* 11 (group 1)
 
-## Within Cluster Within SS for K 1-25
+<br><br>
 
-```{r}
+<p id="desc">This can be useful if we want to find commonality among groups. In this case, we found commonality between states based off our attributes.</p>
+
+<br><br>
+
+<p id="section">Selecting "K"</p>
+
+<br><br>
+
+<p id="desc">There is a way to systematically choose <i>K</i>, and it's through the <strong>elbow method</strong>. I will allow the code to be shown, which demonstrates how it's calculated, which is that we calculate the <i>between sum of squares</i> produced from a range of k, and graph it. The theory suggests that the ideal K would be the inflection point, or the elbow, because it's at the points where it's still producing less and less error, but not to the point where we are just adding more and more K clusters to receive a slight decrease in error. If we create too many K, it may be just individualizing the clusters a little too much, which would oppose the reason why we decided to cluster in the first place.</p>
+
+<br><br>
+
+```{r, echo=FALSE, message=FALSE, fig.width=10}
 table <- NULL
 
 for (k in 1:25){
@@ -115,89 +138,64 @@ for (k in 1:25){
   table[k] <- sum(clusters_for$withinss)
 }
 
-plot(table, col = topo.colors(25))
+plot(table, col = topo.colors(25),
+     ylab = "Between SS",
+     xlab = "K Clusters")
 ```
 
-This is very abitruary since elbow point is not obvious.
+<br><br>
 
-Therefore, I will pick a k of 6 clusters to be the cluster amount for the remainder of the analysis.
+<p id="desc">This is very arbitrary since the <strong>elbow point</strong> is not too obvious. So I will select 6 to be my cluster amount, and re-perform the cluster analysis.</p>
 
-## Cluster with K = 6
+<br><br>
 
-```{r}
+```{r, echo=FALSE, message=FALSE}
 clusters = kmeans(scaled_data, 6)
 (clusters)
 ```
 
-These are the groups made:
+<br><br>
+
+<p id="desc">These are the groups made:</p>
 
 1. Colorado, Connecticut, Iowa, Kansas, Rhode Island, South Dakota, Wisconsin, Utah
 
 2. Alaska
 
-3.Delware, Idaho, Indiana, Maine, Missouri, Montana, Nevada, New Hampshire, Oklahoma, Vermont, Wyoming
+3. Delaware, Idaho, Indiana, Maine, Missouri, Montana, Nevada, New Hampshire, Oklahoma, Vermont, Wyoming
 
-4. California, Florida, Illinois, Maryland, Michigan, New Jersey, New York, Ohio, Pennssylvania, Texas, Virginia
+4. California, Florida, Illinois, Maryland, Michigan, New Jersey, New York, Ohio, Pennsylvania, Texas, Virginia
 
 5. Arizona, Hawaii, Oregon, Washington
 
 6. Alabama, Georgia, Kentucky, Louisiana, Mississippi, New Mexico, North Carolina, South Carolina, Tennessee, West Virginia
 
-## Make a 2D plot 
+<br><br>
 
-```{r}
+<p id="section">Graphing the Cluster</p>
+
+<br><br>
+
+<p id="desc">We can actually graph the cluster on a 2D plane.</p>
+
+<br><br>
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE, fig.width=10, fig.height=7}
 clusplot(scaled_data, clusters$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
 ```
 
-## Insight Gained
+<br><br>
 
-Since there are about 8 attributes used, it seems like there were many - not one - defining feature or influence that helped shape these groups.
+<p id="section">Insight Gained</p>
 
-Group 4, which contains Texas, California, and New York, could be grouped together based on commonality with population, and to an exteny maybe salary and murder.
+<br><br>
 
-Group 6 seems to be a sub-belt group, which might hold common income, frost, and area statistics.
-
-Now, the values of the components are a little more difficult to distinguish. It seems like colder, more northern states are in the positive side of the X-Axis, whereas the sunbelt group 6 is way on the polar end.
-
-## NBA Dataset
-
-```{r}
-# Read in data
-nba <- read_csv("/Users/Wolfe/Desktop/Stats/nba_dataset.csv")
-
-# Make the teams character the index
-rownames(nba) <- nba$Team
-
-# Take off extra columns
-nba$X25 <- NULL
-nba$Team <- NULL
-
-# Make Matrix
-nba <- as.matrix(nba)
-
-# Normalized Data
-scaled_nba <- scale(nba)
-
-# Scaled Data Distance
-nba_distance <- dist(as.matrix(scaled_nba))
-
-# Clustering with Normalized data
-nba_cluster <- hclust(nba_distance, method = "average")
-
-# plot
-plot(nba_cluster)
-
-# 4 Means
-clusters_nba = kmeans(scaled_nba, 4)
-
-# plot 
-clusplot(scaled_nba, clusters_nba$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
-```
-
+<p id="desc">Since there are about 8 attributes used, it seems like there were many - not one - defining feature or influence that helped shape these groups. <br><br>Group 4, which contains Texas, California, and New York, could be grouped together based on commonality with population, and to an extent maybe salary and murder. <br><br>Group 6 seems to be a subbelt group, which might hold common income, frost, and area statistics. <br><br>Now, the values of the components are a little more difficult to distinguish. It seems like colder, more northern states are in the positive side of the X-Axis, whereas the sunbelt group 6 is way on the negative end.</p>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 #title{
 margin: auto;
 text-align: center;
@@ -208,5 +206,12 @@ font-family: 'Bitter', serif;
 #desc{
 font-size: 18px;
 font-family: 'Quicksand', sans-serif;
+}
+#section{
+margin: auto;
+text-align: center;
+font-size: 35px;
+color: #B82424;
+font-family: 'Nanum Gothic', sans-serif;
 }
 </style>
