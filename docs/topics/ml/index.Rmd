@@ -12,7 +12,7 @@ library(lubridate)
 
 <br><br>
 
-<p id="method"><a id="method" class="method" href="cluster.html" target="_blank" >Clustering In R</a></p>
+<p id="method"><a id="method" class="method" href="cluster.html" target="_blank" >Clustering</a></p>
 
 <br><br>
 
@@ -25,6 +25,10 @@ library(lubridate)
 <br><br>
 
 <p id="method"><a id="method" class="knn" href="knn.html" target="_blank" >KNN Regression</a></p>
+
+<br><br>
+
+<p id="method"><a id="method" class="association" href="association.html" target="_blank" >Association Rule Mining</a></p>
 
 
 <style>
@@ -55,6 +59,9 @@ color: #195D1C;
 }
 .knn{
 color: #E54A3B;
+}
+.association{
+color: #5C2C2C;
 }
 </style>
 

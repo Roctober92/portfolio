@@ -1,0 +1,47 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(arules)
+library(arulesViz)
+```
+
+```{r}
+data(Groceries)
+rules <- apriori(Groceries, parameter = list(supp = .004, conf = .3, minlen=2))
+```
+
+```{r}
+summary(rules)
+plot(rules)
+inspect(sort(rules, by="support"))
+```
+
+Highest Confidence: {other vegetables, yogurt, fruit/vegetable juice} => {whole milk} .6172840
+tropical fruit, other vegetables, yogurt --> whole milk .619
+citrus fruit --> newspapers .00833
+whipped/sour cream --> chicken,napkins,newspaper .00721911
+tropical fruit, root vegetables, yogurt --> shole milk .7
+
+Highest Lift: Ham --> white bread | white bread --> ham = 4.639
+citrus fruit, other veggies, whole milk --> root veggies 4.0855
+herbs --> root veggies 3.9564
+citrus fruit, pip fruit --> tropical fruit 3.854
+tropical fruit, other vegetables, whole milk --> root veggies 3.768
+
+Highest support: other vegetables --> whole milk .07483
+root veggies, whole milk --> other veggies .023
+other veggies, rolls/buns --> whole milk .01789
+other vegetables --> whole milk .00748
+root,other vegetables, yogurt --> whole milk .00783
+
+Most interesting:
+tropical fruit, newspapers --> rolls/buns 
+sausage, bottled water --> other vegetables
+citrus fruit --> newspapers .00833
+tropical fruit, curd --> yogurt
+yogurt, soda --> rolls/buns
+
+
