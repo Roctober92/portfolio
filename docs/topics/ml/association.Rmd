@@ -8,40 +8,68 @@ library(arules)
 library(arulesViz)
 ```
 
+<p id = "title">Association Rule Mining</p>
+
+<br><br>
+
+<p id = "desc">A store is always trying to figure out which items do customers by frequently together. That way, they can either put them close together to make it convenient, put the items on opposite ends of the store to make the customers pass by the most amount of merchandise possible, or any other scheme to help raise revenue. <strong>Association Rule Mining</strong> tries to find those grouped items. It does this through a serise of calculating the probabilites of any two items together, and then moving on the 3, 4, 5, etc., as long as the items in a group - as well as the group itself - are above a preset threshold.<br><br>You would commonly analyze the grouping by finding the pairing sets within each grouping number that has the highest <i>confidence</i>, <i>support</i>, and or <i>lift</i>, which are all types of probabilites that give us different insights.<br><br>In the analysis below, we will use a preset grocery data given to R.<br><br>The following code creates a set of rules based on our given minimum probability values.</p>
+
+<br><br>
+
 ```{r}
 data(Groceries)
 rules <- apriori(Groceries, parameter = list(supp = .004, conf = .3, minlen=2))
 ```
 
+<br><br>
+
+<p id = "desc">And the output below is a summary of the rules' attributes. For example, the <i>rule length distribution</i> shows how many sets of items are in each level of groups.</p>
+
+<br><br>
+
 ```{r}
 summary(rules)
+```
+
+<br><br>
+
+<p id = "desc">And the plot that shows us the relationship between the three aforementioned measuring probabilities.</p>
+
+<br><br>
+
+```{r}
 plot(rules)
+```
+
+<br><br>
+
+<p id = "desc">And the long list of the item sets, sorted by <i>support</i>. The <i>support</i> is the probabilty that the items on the left are bought together out of all other possible combinations. The <i>confidence</i> tells us the probability of buying the item on the right (<i>RHS</i>) given that we are already buying the items on the left? The <i>lift</i> tells us if we gain any information over what is already supposed</p>
+
+<br><br>
+
+```{r}
 inspect(sort(rules, by="support"))
 ```
 
-Highest Confidence: {other vegetables, yogurt, fruit/vegetable juice} => {whole milk} .6172840
-tropical fruit, other vegetables, yogurt --> whole milk .619
-citrus fruit --> newspapers .00833
-whipped/sour cream --> chicken,napkins,newspaper .00721911
-tropical fruit, root vegetables, yogurt --> shole milk .7
 
-Highest Lift: Ham --> white bread | white bread --> ham = 4.639
-citrus fruit, other veggies, whole milk --> root veggies 4.0855
-herbs --> root veggies 3.9564
-citrus fruit, pip fruit --> tropical fruit 3.854
-tropical fruit, other vegetables, whole milk --> root veggies 3.768
 
-Highest support: other vegetables --> whole milk .07483
-root veggies, whole milk --> other veggies .023
-other veggies, rolls/buns --> whole milk .01789
-other vegetables --> whole milk .00748
-root,other vegetables, yogurt --> whole milk .00783
 
-Most interesting:
-tropical fruit, newspapers --> rolls/buns 
-sausage, bottled water --> other vegetables
-citrus fruit --> newspapers .00833
-tropical fruit, curd --> yogurt
-yogurt, soda --> rolls/buns
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+#title{
+margin: auto;
+text-align: center;
+font-family: 'Bitter', serif;
+font-size: 75px;
+color: #5C2C2C;
+}
+#desc{
+font-size: 20px;
+font-family: 'Quicksand', sans-serif;
+}
+
+
+</style>
 
 
