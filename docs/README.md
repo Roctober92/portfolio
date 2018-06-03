@@ -15,6 +15,8 @@
 
 <p id="math335" class="website">Data Visualization Examples <i>(link forthcoming)</i></p>
 
+<p id="regression" class="website">Linear Regression<i>(link forthcoming)</i></p>
+
 
 
 <style>
@@ -65,5 +67,8 @@ color: #214485;
 }
 #math335{
 color: #7F52E8;
+}
+#regression{
+color: #5C2C2C;
 }
 </style>
