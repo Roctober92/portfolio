@@ -16,6 +16,9 @@ library(revealjs)
 library(sf)
 library(USAboundaries)
 library(maps)
+library(tidyquant)
+library(timetk)
+library(scales)
 ```
 
 # Data Visualizations {#title}
@@ -103,6 +106,28 @@ leaflet(data = wells_two) %>%
 
 ![](/Users/Wolfe/portfolio_site/docs/pics/nhl.png)
 
+## Interactive Graphs
+
+```{r, message = FALSE, warning=FALSE, echo=FALSE, fig.width=10, fig.height=6}
+
+tickers_today <- c("CXW", "F", "GM", "JCP", "KR", "WDC", "NKE","T", "WDAY", "WFC", "WMT")
+
+stock_data <- tq_get(tickers_today, get = "stock.prices", from = "2013-03-01", to = "2018-06-03") 
+
+spread_stock_data <- stock_data %>% 
+  select(symbol, date, adjusted) %>% 
+  spread(key = symbol, value = adjusted)
+
+stocks <- tk_xts(spread_stock_data)
+
+dygraph(stocks, main = "5 Year Stock Prices", ylab = "Stock Pricer Per Share", xlab = "Per Day") %>% 
+  dyHighlight(highlightCircleSize = 4,
+              highlightSeriesBackgroundAlpha = .3,
+              hideOnMouseOut = TRUE,
+              highlightSeriesOpts = list(strokeWidth = 1)) %>% 
+  dyLegend(width = 800) %>% 
+  dyRangeSelector(dateWindow = c("2013-03-01", "2018-03-01"))
+```
 
 
 
