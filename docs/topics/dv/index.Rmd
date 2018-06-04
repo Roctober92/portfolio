@@ -2,6 +2,7 @@
 output:
   revealjs::revealjs_presentation:
     transition: slide
+    center: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -86,21 +87,17 @@ leaflet(data = wells_two) %>%
 
 ## Mapping Information
 
-<center>
+![](/Users/Wolfe/portfolio_site/docs/pics/us.png)
 
-<div class="pic">
-  ![](/Users/Wolfe/portfolio_site/docs/pics/us.png)
-</div>
-</center>
+
 
 ## Yearly Analysis
 
-<center>
-
 ![](/Users/Wolfe/portfolio_site/docs/pics/states.png)
 
-</center>
+## Bar Plot
 
+![](/Users/Wolfe/portfolio_site/docs/pics/rain.png)
 
 <style>
 #title{
@@ -110,9 +107,6 @@ font-size: 60px;
 margin-top: 3.5em;
 color: #7F52E8;
 }
-.pic{
-width: 900px;
-height: 900px
-}
+
 
 </style>
