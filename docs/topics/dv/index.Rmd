@@ -129,7 +129,9 @@ dygraph(stocks, main = "5 Year Stock Prices", ylab = "Stock Pricer Per Share", x
   dyRangeSelector(dateWindow = c("2013-03-01", "2018-03-01"))
 ```
 
+## Time Plot
 
+![](/Users/Wolfe/portfolio_site/docs/pics/rex.png)
 
 
 <style>
@@ -137,7 +139,6 @@ dygraph(stocks, main = "5 Year Stock Prices", ylab = "Stock Pricer Per Share", x
 margin: auto;
 text-align: center;
 font-size: 60px;
-margin-top: 3.5em;
 color: #7F52E8;
 }
 
