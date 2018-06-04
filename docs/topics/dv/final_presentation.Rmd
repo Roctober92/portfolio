@@ -1,0 +1,316 @@
+---
+title: "MLB Data Science"
+author: Andrew Wolfe
+date: April 2018
+output:
+  ioslides_presentation:
+    incremental: true
+    widescreen: true
+    css: /Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/final.css
+---
+
+```{r, include=FALSE}
+library(tidyverse)
+library(xts)
+library(dygraphs)
+```
+
+
+## Sabermetrics {#explanation}
+
+<ul>
+  <li id="bullet">The empirical, or statistical, analysis of baseball</li>
+  <li id="bullet">Implemented famously by the 2002 Oakland Athletics</li>
+  <li id="bullet">Used by several organizations including fangraphs.com</li>
+  <li id="bullet">Purpose: Use statistics to better understand the game</li>
+</ul>
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/shots/mlb.png)
+</center>
+
+## What's in this report? {#explanation2}
+
+<ul>
+  <li id="bullet">Analysis of 4 Data Questions</li>
+  <li id="bullet">Visualizations</li>
+  <li id="bullet">Plot Commentary</li>
+</ul>
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/shots/funny.jpg)
+</center>
+
+## Data Questions {#explanation}
+
+<ul>
+  <li id="bullet">How has offense changed over time?</li>
+  <li id="bullet">How has pitching changed over time?</li>
+  <li id="bullet">How does age factor into success?</li>
+  <li id="bullet">How does fielding factor into a team's success?</li>
+</ul>
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/shots/saber.jpg)
+</center>
+
+## How has offense changed over time? {#annotation}
+
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=3}
+avg <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/avg.csv")
+
+avg <- xts(avg, order.by=as.Date(avg$Year))
+avg$Year <- NULL
+
+avg_graph <- dygraph(avg, 
+                     main = "Batting Average Per Team", 
+                     ylab = "Batting Average", 
+                     xlab = "Years") %>% 
+  dyHighlight(highlightCircleSize = 4,
+              highlightSeriesBackgroundAlpha = .3,
+              hideOnMouseOut = TRUE,
+              highlightSeriesOpts = list(strokeWidth = 1)) %>% 
+  dyLegend(width = 400) %>% 
+  dyAnnotation("1916-1-1", text = "A") %>% 
+  dyAnnotation("1920-1-1", text = "B") %>% 
+  dyAnnotation("1968-1-1", text = "C")
+
+avg_graph
+```
+
+<ul>
+  <li id="bullet2">A: 1900-1920 was known was the "deadball" era, with low scoring games, and low home run totals</li>
+  <li id="bullet2">B: Babe Ruth came into the league, and hit a record 29 home runs in a season. Rules and the ball itself changed.</li>
+  <li id="bullet2">C: The 2nd deadball era, led to the lowering of the pitching mound, and strike zone tightening, to try to create more offense.</li>
+</ul>
+
+
+## How has offense changed over time? {#annotation}
+
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=3}
+r <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/r.csv")
+
+r <- xts(r, order.by=as.Date(r$Year))
+r$Year <- NULL
+
+r_graph <- dygraph(r, 
+                   main = "Runs Scored Per Team And Game", 
+                   ylab = "Runs Scored", 
+                   xlab = "Years") %>% 
+  dyHighlight(highlightCircleSize = 4,
+              highlightSeriesBackgroundAlpha = .3,
+              hideOnMouseOut = TRUE,
+              highlightSeriesOpts = list(strokeWidth = 1)) %>% 
+  dyLegend(width = 400) %>% 
+  dyAnnotation("2000-1-1", text = "A") %>% 
+  dyAnnotation("2014-1-1", text = "B")
+
+r_graph
+```
+
+<ul>
+  <li id="bullet2">This graph mirrors the <i>batting average</i> shown in the last graph. The peaks and valleys reflect both the deadball eras.</li>
+  <li id="bullet">A: This probably represents the peak of the <i>steroid era</i> before league-wide PED testing became prevalent in 2003.</li>
+  <li id="bullet">B: In the last few years, the MLB has observed lower scoring and longer games.</li>
+</ul>
+
+## How has offense changed over time? {#annotation}
+
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=3}
+double <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/double.csv")
+
+double <- xts(double, order.by=as.Date(double$Year))
+double$Year <- NULL
+
+double_graph <- dygraph(double, 
+                        main = "Doubles Per Team And Game", 
+                        ylab = "Doubles", 
+                        xlab = "Years") %>% 
+  dyHighlight(highlightCircleSize = 4,
+              highlightSeriesBackgroundAlpha = .3,
+              hideOnMouseOut = TRUE,
+              highlightSeriesOpts = list(strokeWidth = 1)) %>% 
+  dyLegend(width = 400)
+
+double_graph
+```
+
+<ul>
+  <li id="bullet2">"Per Team And Game" is a way to standardize the data since team and game numbers in a season were not consistant throughout the years</li>
+  <li id="bullet2">Numbers seem to follow narrative shown by previous graphs: peaks and valleys among same years.</li>
+</ul>
+
+## How has offense changed over time? {#annotation}
+
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=3}
+hr <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/hr.csv")
+
+hr <- xts(hr, order.by=as.Date(hr$Year))
+hr$Year <- NULL
+
+HR_graph <- dygraph(hr, 
+                    main = "Home Runs Per Team And Game", 
+                    ylab = "Home Runs", 
+                    xlab = "Years") %>% 
+  dyHighlight(highlightCircleSize = 4,
+              highlightSeriesBackgroundAlpha = .3,
+              hideOnMouseOut = TRUE,
+              highlightSeriesOpts = list(strokeWidth = 1)) %>% 
+  dyLegend(width = 400) %>% 
+  dyAnnotation("1943-1-1", text = "A") %>% 
+  dyAnnotation("1994-1-1", text = "B")
+
+HR_graph
+```
+
+<ul>
+  <li id="bullet2">A: [Here](https://www.si.com/vault/1985/05/13/622451/the-inside-story-about-baseball-in-1943-was-less-bounce-to-the-ounce), the MLB introduced a new baseball that didn't bounce as much as the last ball. Also, this season was played during the middle of World War 2.</li>
+  <li id="bullet2">B: There may be not great explanation for the spike in home runs in the 90s other than the development of great HR hitters. Some included Barry Bonds, Ken Griffey Jr, and Mark McGwire.</li>
+</ul>
+
+## How has offense changed over time? {#annotation}
+
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=7, fig.height=3}
+
+sb <- read_csv("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/sb.csv")
+
+sb <- xts(sb, order.by=as.Date(sb$Year))
+sb$Year <- NULL
+
+SB_graph <- dygraph(sb, 
+                    main = "Stolen Bases Per Team Per Game", 
+                    ylab = "Stolen Bases", 
+                    xlab = "Years") %>% 
+  dyHighlight(highlightCircleSize = 4,
+              highlightSeriesBackgroundAlpha = .3,
+              hideOnMouseOut = TRUE,
+              highlightSeriesOpts = list(strokeWidth = 1)) %>% 
+  dyLegend(width = 400)
+
+SB_graph
+```
+
+<ul>
+  <li id="bullet2">Stolen bases have been going down since the 1980's, and even more so on a longterm trend.</li>
+  <li id="bullet2">[This article](http://www.sportsonearth.com/article/169289786/stolen-bases-are-few-in-mlb) suggests that teams are becoming more kean to studying videos and finding the tendencies of opposing team's runners. With that, they can prepare signals to send to their team when on defense, to catch a runner when they think he is about to try to steal a base.</li>
+</ul>
+
+## How has pitching changed over time? {#annotation2}
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/kbbline.png)
+</center>
+
+<ul>
+  <li id="bullet2">This plot is saying: How many strikeouts per walk are pitchers getting? Each dot represents each team every year.</li>
+  <li id="bullet2">The upward trend towards strikouts is not due to a decrease in walks per team per year, but is contributed towards a large increase in strikeouts. In 1930, there were 500 strikeouts per team, whereas in 2016 there were 1300.</li>
+</ul>
+
+## How has pitching changed over time? {#annotation4}
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/wild_pitch_line.png)
+</center>
+
+<ul>
+  <li id="bullet2">Why wild pitches? Just to see if there was any interesting trends. It appears the have a slightly increasing trend, but at a such small rate per game (0.4), that they are largely a non-factor in big picture analysis.</li>
+  <li id="bullet2">If there is anything to note, it's interesting to see the variance within teams per year. Over a 162 game season, some with have about 60 more per year than others. Houston = .61 | Detroit = .27</li>
+</ul>
+
+## How has pitching changed over time? {#annotation3}
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/complete_game_line.png)
+</center>
+
+<ul>
+  <li id="bullet2">There are probably many reasons why there is such a decreasing trend in complete games, almost to its extinction.</li>
+  <li id="bullet2">In 1969, the "save" was created, a new stat saying that a new pitcher would come in and preserve the lead until the end.</li>
+  <li id="bullet2">Also, the expansion of teams means the increase spread of good talent, meaning less pitchers per pitcher will get one.</li>
+</ul>
+
+## How does age factor into success? {#annotation3}
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/champion_age.png)
+</center>
+
+## How does age factor into success? {#explanation}
+
+<ul>
+  <li id="bullet">From the previous plot, one insight we can draw is the relationship between the average pitcher and batter age of every world series winning team.</li>
+  <li id="bullet">The average pitcher age seems to hug the mean, and fluctuate around it less so than the batter's age.</li>
+  <li id="bullet">Whether a team won the division, or came in as a wild card, looks insignificant at this points. Both types of team seem to have a similar variance around the fitted line.</li>
+</ul>
+
+## How does age factor into success?
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/age_winner.png)
+</center>
+
+## How does age factor into success? {#explanation}
+
+<ul>
+  <li id="bullet">Each dot represents a single team in a single year. The distribution of dots represent all combinations of teams and years.</li>
+  <li id="bullet"><strong>Now this is interesting:</strong> Winning Percentage has a constant increasing trend with average team age.</li>
+  <li id="bullet">I suggest we don't suppose that older players are better, but the best teams are comprised of the best of the older players. In any case, it's a striking trend. Many insights could be drawn.</li>
+  <li id="bullet">This also shows that most teams' average lies around 27-29 years old.</li>
+</ul>
+
+## How does fielding factor in to a team's success? 
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/field_winning.png)
+</center>
+
+## How does fielding factor in to a team's success? {#explanation2}
+
+<ul>
+  <li id="bullet">Fielding Percentage is the amount of balls thats should be fielded correctly, that actually are.</li>
+  <li id="bullet">It's intriguing to see how fielding percentage has increased with each era, almost distinctly. </li>
+  <li id="bullet">Each era has a positive correlation between winning and fielding percentage, more so with each younger era.</li>
+</ul>
+
+## How does fielding factor in to a team's success? 
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/double_play.png)
+</center>
+
+## How does fielding factor in to a team's success? {#explanation2}
+
+<ul>
+  <li id="bullet">Interesting to note: there really isn't a trend either in winning percentage, nor in era, at least visible here.</li>
+  <li id="bullet">With the exception that the majority of double play figures below .7 per game seem to come from the Before 1916 period.</li>
+</ul>
+
+## How does fielding factor in to a team's success? 
+
+<center>
+![](/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/final_project/plots/assist.png)
+</center>
+
+## How does fielding factor in to a team's success? {#explanation2}
+
+<ul>
+  <li id="bullet">An assist is given to the fielder that last touched the ball before his teammate recorded an out, even if it touched him unintentionally. He is also given an assist when his teammated an error, and should have got the out.</li>
+  <li id="bullet">Assists are hard to access just because they are counted in so many different ways, and the outfield assists tend to be more important that those of the infield.</li>
+  <li id="bullet">We see that there is a slightly negative trend between winning and assists per game. For a few reasons this could be. We can consider that a team with more errors has more assists than outs. We can also consider a team who gets their outs by flyouts or strikeouts more often.</li>
+</ul>
+
+## Conclusion
+
+<ul>
+  <li id="bullet">Most statistics seem to change according to the era, some almost uniformly, where the entire era happended between a certain range (see Fielding Percentage Slide).</li>
+  <li id="bullet">These graphs are evidence of a story. The MLB has gone through many changes in its history, whether they be internal or external. </li>
+  <li id="bullet">Most delve into these datasets wanting to find the next great stat to predict worth, like [WAR](https://www.fangraphs.com/library/misc/war/). However, this report may be less useful to a team's Vice President of Operations, but more to the League Commissioner's offce, who helps in making policy, and can see how all these stats have been affected through the eras of policy and culture change.</li>
+</ul>
+
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Prociono');
+@import url('https://fonts.googleapis.com/css?family=Shanti');
+</style>

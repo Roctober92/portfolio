@@ -17,7 +17,8 @@
 
 <p id="regression" class="website">Linear Regression<i>(link forthcoming)</i></p>
 
-<p class = "website" id = "mlb">MLB Data Analysis<i> (link forthcoming)</i></p>
+<p class = "website" id = "mlb"><a id = "mlb" href = "topics/dv/final_presentation.html"
+target = "_blank">MLB Data Analysis</a></p>
 
 
 
