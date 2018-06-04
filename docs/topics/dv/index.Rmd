@@ -99,6 +99,14 @@ leaflet(data = wells_two) %>%
 
 ![](/Users/Wolfe/portfolio_site/docs/pics/rain.png)
 
+## Bar Plot
+
+![](/Users/Wolfe/portfolio_site/docs/pics/nhl.png)
+
+
+
+
+
 <style>
 #title{
 margin: auto;
