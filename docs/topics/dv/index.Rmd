@@ -1,0 +1,41 @@
+---
+output:
+  revealjs::revealjs_presentation:
+    transition: slide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+library(dygraphs)
+library(xts)
+library(leaflet)
+library(revealjs)
+```
+
+# Data Visualization {#title}
+
+## Library of visualizations made in R
+
+```{r, message = FALSE, warning=FALSE, echo=FALSE}
+
+```
+
+
+
+
+
+
+
+<style>
+#title{
+margin: auto;
+text-align: center;
+font-size: 60px;
+margin-top: 3.5em;
+color: #7F52E8;
+}
+
+
+</style>

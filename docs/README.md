@@ -13,9 +13,11 @@
 
 <p id="model" class="website">2018 COMAP Math Modeling Competition <i>(link forthcoming)</i></p>
 
-<p id="math335" class="website">Data Visualization Examples <i>(link forthcoming)</i></p>
+<p id="math335" class="website"><a id = "math335" href="topics/dv/index.html" target = "_blank">Data Visualization Examples</a></p>
 
 <p id="regression" class="website">Linear Regression<i>(link forthcoming)</i></p>
+
+<p class = "website" id = "mlb">MLB Data Analysis<i> (link forthcoming)</i></p>
 
 
 
@@ -70,5 +72,8 @@ color: #7F52E8;
 }
 #regression{
 color: #5C2C2C;
+}
+#mlb{
+color: black;
 }
 </style>
