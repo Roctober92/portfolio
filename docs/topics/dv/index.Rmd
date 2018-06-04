@@ -133,6 +133,55 @@ dygraph(stocks, main = "5 Year Stock Prices", ylab = "Stock Pricer Per Share", x
 
 ![](/Users/Wolfe/portfolio_site/docs/pics/rex.png)
 
+## Jittered Boxplot
+
+```{r, message = FALSE, warning=FALSE, echo=FALSE, fig.width=10, fig.height=6}
+
+min_final <- read_csv("boxplot.csv")
+min_low.2 <- read_csv("min_low.2.csv")
+min_high.2 <- read_csv("min_high.2.csv")
+
+
+min_final %>% 
+  mutate(mon = fct_relevel(mon, levels = c("Jan",
+                                           "Feb",
+                                           "Mar",
+                                           "Apr",
+                                           "May",
+                                           "Jun",
+                                           "Jul",
+                                           "Aug",
+                                           "Sep",
+                                           "Oct",
+                                           "Nov",
+                                           "Dec"))) %>%
+  ggplot(aes(x = mon, y = min_temp_avg, color = mon)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(width = .2, alpha = .5) +
+  geom_jitter(data = min_high.2, 
+              aes(y = min_temp_mean), 
+              color  = "black", 
+              width = .2) +
+  geom_jitter(data = min_low.2, 
+              aes(y = min_temp_mean), 
+              color  = "brown", 
+              width = .2) +
+  theme_bw() +
+  labs(title = "15 Day Min Temps After Predictions Added",
+       x = "Month",
+       y = "Average 15 Day Min Temp Per Station",
+       caption = "32 Degree Temps Not Added In Yet",
+       subtitle = "Black = Former Top .2% Data | Red = Former Bottom .2% Data") +
+  theme(plot.title = element_text(hjust = .5, size = rel(2)),
+        axis.title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.2)),
+        plot.caption = element_text(size = rel(1.5)),
+        legend.position = "none")
+
+```
+
+
+
 
 <style>
 #title{
