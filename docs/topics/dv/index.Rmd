@@ -73,22 +73,33 @@ icons <- awesomeIcons(
 
 # Make Leaflet Plot
 leaflet(data = wells_two) %>% 
-  setView(lng = -112.7924, lat = 43.8231, zoom = 5) %>%  
+  setView(lng = -112.7924, lat = 43.8231, zoom = 6) %>%  
   addTiles() %>% 
   addAwesomeMarkers(~Longitude, ~Latitude, label = ~Owner, icon=icons) %>% 
   addPolygons(data = id, color = topo.colors(10), opacity = .3) %>% 
   addPolygons(data = henry) %>% 
   addPolygons(data = snake) %>% 
   addCircleMarkers(data = large_dams, label = large_dams$DamName)
- 
-
 ```
 
 </center>
 
-## 
+## Mapping Information
 
+<center>
 
+<div class="pic">
+  ![](/Users/Wolfe/portfolio_site/docs/pics/us.png)
+</div>
+</center>
+
+## Yearly Analysis
+
+<center>
+
+![](/Users/Wolfe/portfolio_site/docs/pics/states.png)
+
+</center>
 
 
 <style>
@@ -99,6 +110,9 @@ font-size: 60px;
 margin-top: 3.5em;
 color: #7F52E8;
 }
-
+.pic{
+width: 900px;
+height: 900px
+}
 
 </style>
