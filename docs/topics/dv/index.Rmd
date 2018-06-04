@@ -12,84 +12,81 @@ library(dygraphs)
 library(xts)
 library(leaflet)
 library(revealjs)
+library(sf)
+library(USAboundaries)
+library(maps)
 ```
 
-# Data Visualization {#title}
+# Data Visualizations {#title}
 
-## Library of visualizations made in R
+## Interactive Maps
 
 <center>
 
-```{r, message = FALSE, warning=FALSE, echo=FALSE, fig.width=7, fig.height=6}
-villa_icon <- makeIcon(iconUrl = "/Users/Wolfe/Desktop/Winter 2018/Data Visualization/Math 335/Case_Study_11/analysis/skull.png", iconWidth = 30, iconHeight = 40)
+```{r, message = FALSE, warning=FALSE, echo=FALSE, fig.width=7, fig.height=6} 
+ # Recreate Plot from Task 20 in Leaflet
 
+# Get same US data
+us_data <- read_sf("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/us.shp")
 
-########################## Colors #################################
-pench <- awesomeIcons(
-  markerColor = "green"
+# Gets Rivers Data
+river_data <- read_sf("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/rios.shp")
+
+# Get same Wells data
+wells_data <- read_sf("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/poso.shp")
+
+# Get Dam Data
+dams_data <- read_sf("/Users/Wolfe/Desktop/Winter 2018/Data Visualization/dams.shp")
+
+# Get Idaho County Map
+id <- us_counties(states = "Idaho", resolution = "high")
+
+# Bigger than 5000
+wells_two <- wells_data %>% 
+  filter(Production > 5000)
+
+# Tranformed Projection data
+us_trans <- st_transform(us_data, crs = "+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+
+# Data for Idaho
+idaho_map <- us_trans %>% 
+  filter(StateName == "Idaho")
+
+## Dams with more than 50 acres surface area
+large_dams <- dams_data %>% 
+  filter(SurfaceAre > 50) %>% 
+  st_transform(crs = "+proj=longlat +datum=WGS84") # --> lat and long
+
+# Rivers with Snake River and Henry's Fork
+snake <- river_data %>% 
+  filter(FEAT_NAME == "Snake River") %>% 
+  st_transform(crs = "+proj=longlat +datum=WGS84")
+
+henry <- river_data %>% 
+  filter(FEAT_NAME == "Henrys Fork") %>% 
+  st_transform(crs = "+proj=longlat +datum=WGS84")
+
+# Change color for wells
+icons <- awesomeIcons(
+  iconColor = 'orange'
 )
 
-oficina <- awesomeIcons(
-  markerColor = "purple"
-)
-
-########################## Markers #################################
-
-oficina_bao <- tibble(
-  long = -58.569452,
-  lat = -34.632637,
-  label = "Mission Office"
-)
-
-villas <- tibble(
-  long = c(-58.380879, -58.439433, -58.489639, -58.555165, -58.576406, -58.540030),
-  lat = c(-34.584263, -34.649815, -34.689564, -34.591405, -34.624638, -34.620840),
-  label = c("Villa 31", "Villa 1-11-14", "Villa Madero", "Villa Tropezon", "Villa Carlos Gardel", "La Fuerte Apache")
-)
-
-domocilios <- tibble(
-  long = c(-58.719654),
-  lat = c(-34.695099),
-  label = c("Dario's house")
-)
-
-BAO_Data <- tibble(
-  long = c(-58.738283, -58.767636, -58.539909, -58.677223, -59.113552, -58.728183, -60.018719, -60.021811),
-  lat = c(-34.664863, -34.674616, -34.597635, -34.667288, -34.571306, -34.688278, -34.894501, -34.893411),
-  label = c("Merlo 1 Pench", "Arco Iris Pench", "The Headquarters", "Ituzaingó Moldy Pench", "Lujan 1 Pench", "Parque House", "Bolivar Suite", "Chivilcoy Club")
-)
-
-########################## THE PLOT #################################
-
-leaflet() %>% 
-  setView(lng = -58.728, lat = -34.66, zoom = 8) %>% 
+# Make Leaflet Plot
+leaflet(data = wells_two) %>% 
+  setView(lng = -112.7924, lat = 43.8231, zoom = 5) %>%  
   addTiles() %>% 
-  addAwesomeMarkers(data = BAO_Data, label = BAO_Data$label, icon = pench) %>% 
-  addMarkers(data = domocilios, label = domocilios$label,
-    labelOptions = labelOptions(noHide = T, direction = "bottom",
-      style = list(
-        "color" = "darkblue",
-        "font-family" = "Titillium Web",
-        "font-style" = "italic",
-        "box-shadow" = "1px 1px rgba(0,0,0,0.25)",
-        "font-size" = "15px",
-        "border-color" = "rgba(0,0,0,0.5)"
-      ))) %>% 
-  addMarkers(data = villas, label = villas$label, icon = villa_icon,
-    labelOptions = labelOptions(noHide = T, direction = "bottom",
-      style = list(
-        "color" = "black",
-        "font-family" = "serif",
-        "font-style" = "italic",
-        "box-shadow" = "1px 1px rgba(0,0,0,0.25)",
-        "font-size" = "15px",
-        "border-color" = "rgba(0,0,0,0.5)"
-      ))) %>% 
-  addAwesomeMarkers(data = oficina_bao, label = oficina_bao$label, icon = oficina)
+  addAwesomeMarkers(~Longitude, ~Latitude, label = ~Owner, icon=icons) %>% 
+  addPolygons(data = id, color = topo.colors(10), opacity = .3) %>% 
+  addPolygons(data = henry) %>% 
+  addPolygons(data = snake) %>% 
+  addCircleMarkers(data = large_dams, label = large_dams$DamName)
+ 
+
 ```
 
 </center>
 
+## 
 
 
 
