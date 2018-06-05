@@ -18,11 +18,16 @@ library(lubridate)
 
 <p id = "desc">In February 2018, I participated in BYU-Idaho's first ever team in the <a href="http://www.comap.com" target="_blank">COMAP Mathematical Modeling Competition</a>. For this competition, we were given the choice between 6 different prompts, and were given 4 days to create a mathematical model that would offer a solution to the prompts.</p>
 
+<br><br>
+
+<p id="section"><a id="section" href="climate.pdf" target="_blank">Climate Change Question</a></p>
+
 
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 #title{
 margin: auto;
 text-align: center;
@@ -37,6 +42,14 @@ margin-top: -13em;
 #desc{
 font-size: 20px;
 font-family: 'Quicksand', sans-serif;
+}
+#section{
+margin: auto;
+text-align: center;
+font-size: 45px;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+color: red;
+letter-spacing: 5px;
 }
 </style>
 
