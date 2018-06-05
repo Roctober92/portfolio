@@ -22,6 +22,30 @@ library(lubridate)
 
 <p id="section"><a id="section" href="climate.pdf" target="_blank">Climate Change Question</a></p>
 
+<br><br>
+
+<p id = "desc"><i>Our analysis included the following steps:</i></p>
+
+<br>
+
+<ul id="list">
+  <li id="bullet"> Summarizing the task in bullets to understand it better</li>
+  <li id="bullet"> Researching climate science and political stability principles</li>
+  <li id="bullet"> Reviewed machine learning algorithms to remind ourselves of their capabilites</li>
+  <li id="bullet"> Went through an iterative process of defining how to represent climate change - <i>we eventually chose temperature</i></li>
+  <li id="bullet"> Went through another iterative process of defining the relationship between temperature and stability</li>
+  <li id="bullet"> Created a report through LaTex</li>
+  <li id="bullet"> Edited and revised throughout the next 2 months</li>
+  <li id="bullet"> Created and presented a <a id = "pp" href = "https://docs.google.com/presentation/d/18mVmyFbIehldOca_lHySLG-OuJ_Gmr8nJeMBZv0FEBk/edit?usp=sharing" target = "_blank">PowerPoint</a> at MAA Math Convention in Logan, Utah.</li>
+</ul>
+
+<br><br>
+
+<p id = "desc">The following link is our submitted report to the COMAP committee. In the end, we summarized that when the yearly average temperature change is greatest over a 5 year period, that is when the political stability is the most likely to change as a result. We also argued that the weaker the state, the more susceptable to climate change.</p>
+
+<br><br>
+
+<p id="section"><a id="section" href="report.pdf" target="_blank">Final Report</a></p>
 
 
 <style>
@@ -46,10 +70,22 @@ font-family: 'Quicksand', sans-serif;
 #section{
 margin: auto;
 text-align: center;
-font-size: 45px;
+font-size: 35px;
 font-family: 'Yanone Kaffeesatz', sans-serif;
 color: red;
 letter-spacing: 5px;
+}
+#list{
+list-style-type: square;
+}
+#bullet{
+font-size: 20px;
+font-family: 'Quicksand', sans-serif;
+}
+#pp{
+color: red;
+font-size: 25px;
+font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 </style>
 
