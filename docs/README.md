@@ -1,25 +1,26 @@
 <p id="library">Data Science Portfolio</p>
 <p id="name">by Andrew Wolfe</p>
 <br>
-<p id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></p>
-
-<p id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></p>
-
-<p class="website"><a id="machine" class="website" href="topics/ml/index.html" target="_blank">Machine Learning</a></p>
-
-<p class = "website" id = "mlb"><a id = "mlb" href = "topics/dv/final_presentation.html"
-target = "_blank">MLB Data Analysis</a></p>
-
-<p id="math335" class="website"><a id = "math335" href="topics/dv/index.html" target = "_blank">Data Visualization Examples</a></p>
-
-<p id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></p>
-
-<p id="consult" class="website">Consulting <i>(link forthcoming)</i></p>
-
-<p id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></p>
-
-<p id="regression" class="website">Linear Regression<i>(link forthcoming)</i></p>
-
+<ul id="bullet">
+  <li id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></li>
+  
+  <li id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></li>
+  
+  <li class="website"><a id="machine" class="website" href="topics/ml/index.html" target="_blank">Machine Learning</a></li>
+  
+  <li class = "website" id = "mlb"><a id = "mlb" href = "topics/dv/final_presentation.html"
+  target = "_blank">MLB Data Analysis</a></li>
+  
+  <li id="math335" class="website"><a id = "math335" href="topics/dv/index.html" target = "_blank">Data Visualization Examples</a></li>
+  
+  <li id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></li>
+  
+  <li id="consult" class="website">Consulting <i>(link forthcoming)</i></li>
+  
+  <li id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></li>
+  
+  <li id="regression" class="website">Linear Regression<i>(link forthcoming)</i></li>
+</ul>
 
 
 
@@ -42,8 +43,6 @@ font-size: 30px;
 font-family: 'Fjalla One', sans-serif;
 }
 #linkedin{
-margin: auto;
-text-align: center;
 font-size: 40px;
 font-family: 'Nanum Gothic', sans-serif;
 color: #0077B5;
@@ -52,8 +51,6 @@ color: #0077B5;
 color: #C22C23;
 }
 .website{
-margin: auto;
-text-align: center;
 font-size: 40px;
 font-family: 'Quicksand', sans-serif;
 }
@@ -77,5 +74,8 @@ color: #5C2C2C;
 }
 #mlb{
 color: black;
+}
+#bullet{
+list-style-type: square;
 }
 </style>
