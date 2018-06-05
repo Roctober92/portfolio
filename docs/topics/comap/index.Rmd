@@ -1,0 +1,42 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+```
+
+<p id = "title">Math Modeling</p>
+
+<br>
+
+<div id="png">
+  ![](/Users/Wolfe/portfolio_site/docs/pics/comap.png)
+</div>
+
+<p id = "desc">In February 2018, I participated in BYU-Idaho's first ever team in the <a href="http://www.comap.com" target="_blank">COMAP Mathematical Modeling Competition</a>. For this competition, we were given the choice between 6 different prompts, and were given 4 days to create a mathematical model that would offer a solution to the prompts.</p>
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+#title{
+margin: auto;
+text-align: center;
+font-size: 80px;
+color: #214485;
+font-family: 'Bitter', serif;
+margin-left: 4em;
+}
+#png{
+margin-top: -13em;
+}
+#desc{
+font-size: 20px;
+font-family: 'Quicksand', sans-serif;
+}
+</style>
+

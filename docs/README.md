@@ -12,11 +12,11 @@ target = "_blank">MLB Data Analysis</a></p>
 
 <p id="math335" class="website"><a id = "math335" href="topics/dv/index.html" target = "_blank">Data Visualization Examples</a></p>
 
+<p id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></p>
+
 <p id="consult" class="website">Consulting <i>(link forthcoming)</i></p>
 
 <p id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></p>
-
-<p id="model" class="website">2018 COMAP Math Modeling Competition <i>(link forthcoming)</i></p>
 
 <p id="regression" class="website">Linear Regression<i>(link forthcoming)</i></p>
 
