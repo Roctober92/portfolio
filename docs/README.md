@@ -2,10 +2,6 @@
 <p id="name">by Andrew Wolfe</p>
 <br>
 <ul id="bullet">
-  <li id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></li>
-  
-  <li id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></li>
-  
   <li class="website"><a id="machine" class="website" href="topics/ml/index.html" target="_blank">Machine Learning</a></li>
   
   <li class = "website" id = "mlb"><a id = "mlb" href = "topics/dv/final_presentation.html"
@@ -14,6 +10,10 @@
   <li id="math335" class="website"><a id = "math335" href="topics/dv/index.html" target = "_blank">Data Visualization Examples</a></li>
   
   <li id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></li>
+  
+  <li id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></li>
+  
+  <li id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></li>
   
   <li id="consult" class="website">Consulting <i>(link forthcoming)</i></li>
   
@@ -48,32 +48,32 @@ font-family: 'Nanum Gothic', sans-serif;
 color: #0077B5;
 }
 #website{
-color: #C22C23;
+color: #7F52E8;
 }
 .website{
 font-size: 40px;
 font-family: 'Quicksand', sans-serif;
 }
 #machine{
-color: #EECA38;
+color: #C22C23;
 }
 #consult{
 color: darkgrey;
 }
 #snow{
-color: #146419;
+color: black;
 }
 #model{
 color: #214485;
 }
 #math335{
-color: #7F52E8;
+color: #146419;
 }
 #regression{
 color: #5C2C2C;
 }
 #mlb{
-color: black;
+color: #EECA38;
 }
 #bullet{
 list-style-type: square;
