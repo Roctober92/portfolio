@@ -16,7 +16,7 @@ library(lubridate)
   ![](/Users/Wolfe/portfolio_site/docs/pics/comap.png)
 </div>
 
-<p id = "desc">In February 2018, I participated in BYU-Idaho's first ever team in the <a href="http://www.comap.com" target="_blank">COMAP Mathematical Modeling Competition</a>. For this competition, we were given the choice between 6 different prompts, and were given 4 days to create a mathematical model that would offer a solution to the prompts.</p>
+<p id = "desc">In February 2018, I participated in BYU-Idaho's first ever team in the <a href="http://www.comap.com" target="_blank">COMAP Mathematical Modeling Competition</a>. For this competition, we were given the choice between 6 different prompts, and were given 4 days to create a mathematical model that would offer a solution to our selected.</p>
 
 <br><br>
 
