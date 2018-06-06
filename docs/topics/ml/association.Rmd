@@ -12,7 +12,7 @@ library(arulesViz)
 
 <br><br>
 
-<p id = "desc">A store is always trying to figure out which items do customers by frequently together. That way, they can either put them close together to make it convenient, put the items on opposite ends of the store to make the customers pass by the most amount of merchandise possible, or any other scheme to help raise revenue. <strong>Association Rule Mining</strong> tries to find those grouped items. It does this through a serise of calculating the probabilites of any two items together, and then moving on the 3, 4, 5, etc., as long as the items in a group - as well as the group itself - are above a preset threshold.<br><br>You would commonly analyze the grouping by finding the pairing sets within each grouping number that has the highest <i>confidence</i>, <i>support</i>, and or <i>lift</i>, which are all types of probabilites that give us different insights.<br><br>In the analysis below, we will use a preset grocery data given to R.<br><br>The following code creates a set of rules based on our given minimum probability values.</p>
+<p id = "desc">A store is always trying to figure out which items do customers by frequently together. That way, they can either put them close together to make it convenient, put the items on opposite ends of the store to make the customers pass by the most amount of merchandise possible, or any other scheme to help raise revenue. <strong>Association Rule Mining</strong> tries to find those grouped items. It does this through a series of calculating the probabilites of any two items together, and then moving on a group of 3, of 4, of 5, etc., as long as the items in a group - as well as the group itself - all have probability numbers above a preset threshold.<br><br>You would commonly analyze the grouping by finding the pairing sets within each grouping number that has the highest <i>confidence</i>, <i>support</i>, and or <i>lift</i>, which are all types of probabilites that give us different insights.<br><br>In the analysis below, we will use a preset grocery data given to R.<br><br>The following code creates a set of rules based on our given minimum probability values.</p>
 
 <br><br>
 
@@ -43,7 +43,7 @@ plot(rules)
 
 <br><br>
 
-<p id = "desc">And the long list of the item sets, sorted by <i>support</i>. The <i>support</i> is the probabilty that the items on the left are bought together out of all other possible combinations. The <i>confidence</i> tells us the probability of buying the item on the right (<i>RHS</i>) given that we are already buying the items on the left? The <i>lift</i> tells us if we gain any information over what is already supposed</p>
+<p id = "desc">And the long list of the item sets, sorted by <i>support</i>. The <i>support</i> is the probabilty that the items on the left are bought together out of all other possible combinations. The <i>confidence</i> tells us the probability of buying the item on the right (<i>RHS</i>) given that we are already buying the items on the left. The <i>lift</i> tells us if we gain any information over what is already supposed</p>
 
 <br><br>
 
