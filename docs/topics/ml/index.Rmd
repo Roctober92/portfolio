@@ -14,26 +14,69 @@ library(lubridate)
 
 <p id="method"><a id="method" class="method" href="cluster.html" target="_blank" >Clustering</a></p>
 
+<br>
+
+<center>
+<ul id="list">
+  <li id="desc">Used for grouping together elements based on attributes,   like TSA could look at the attributes of a person, and try to label       whether that person is a threat or not.</li>
+</ul>
+</center>
+
 <br><br>
 
 <p id="method"><a id="method" class="ensemble" href="ensemble_summary.html" target="_blank" >Ensemble Learning</a></p>
+
+<br>
+
+<center>
+<ul id="list">
+  <li id="desc">Running one or many datasets through several algorithms in   order to see which one would predict best each dataset.</li>
+</ul>
+</center>
 
 <br><br>
 
 <p id="method"><a id="method" class="neural" href="neural.html" target="_blank" >Neural Network</a></p>
 
+<br>
+
+<center>
+<ul id="list">
+  <li id="desc">An algorithm that changes weights based on prediction error to best learn the attributes of a dataset, and therefore predict the best possible.</li>
+</ul>
+</center>
+
+
 <br><br>
 
 <p id="method"><a id="method" class="knn" href="knn.html" target="_blank" >KNN Regression</a></p>
+
+<br>
+
+<center>
+<ul id="list">
+  <li id="desc">A regression method where values are predicted for each row of a dataset based on calculated proximity to training set rows.</li>
+</ul>
+</center>
+
 
 <br><br>
 
 <p id="method"><a id="method" class="association" href="association.html" target="_blank" >Association Rule Mining</a></p>
 
+<br>
+
+<center>
+<ul id="list">
+  <li id="desc">Used for finding out which items are commonly grouped together, or leads to other items, which is very useful in analyzing shopping data.</li>
+</ul>
+</center>
+
+
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Bitter');
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 #title{
 margin: auto;
 text-align: center;
@@ -62,6 +105,15 @@ color: #E54A3B;
 }
 .association{
 color: #5C2C2C;
+}
+#desc{
+font-size: 20px;
+font-family: 'Varela Round', sans-serif;
+}
+#list{
+list-style-type: square;
+margin-left: 3em;
+margin-right: 3em;
 }
 </style>
 
