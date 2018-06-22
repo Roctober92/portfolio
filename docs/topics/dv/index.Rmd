@@ -184,6 +184,10 @@ min_final %>%
 
 ![](/Users/Wolfe/portfolio_site/docs/pics/rex_plot.png)
 
+## Custom Residual Plots
+
+![](/Users/Wolfe/portfolio_site/docs/pics/res.png)
+
 
 <style>
 #title{
