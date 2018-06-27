@@ -1,6 +1,6 @@
 ---
 title: "MLB Data Science"
-author: Andrew Wolfe
+author: Andrew Wolfe (right, down arrow to change slides)
 date: April 2018
 output:
   ioslides_presentation:
