@@ -2,6 +2,8 @@
 <p id="name">by Andrew Wolfe</p>
 <br>
 <ul id="bullet">
+  <li class="website"><a id="snow" class="website" href = "https://byuidatascience.github.io/WolfeA_SeniorProject/" target = "_blank">Colorado Snowpack Analysis</a></li>
+  
   <li class="website"><a id="machine" class="website" href="topics/ml/index.html" target="_blank">Machine Learning</a></li>
   
   <li class = "website" id = "mlb"><a id = "mlb" href = "topics/dv/final_presentation.html"
@@ -16,8 +18,6 @@
   <li id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></li>
   
   <li id="consult" class="website">Consulting <i>(link forthcoming)</i></li>
-  
-  <li id="snow" class="website">Colorado Snowpack Analysis <i>(link forthcoming)</i></li>
   
   <li id="regression" class="website">Linear Regression<i>(link forthcoming)</i></li>
 </ul>
