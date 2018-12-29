@@ -1,0 +1,14 @@
+---
+output:
+  revealjs::revealjs_presentation:
+    transition: slide
+    center: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(pacman)
+p_load(tidyverse, lubridate, revealjs)
+```
+
+# Climate Research in R {#title}
