@@ -13,7 +13,7 @@
   
   <li id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></li>
   
-  <li id="talk" class="website"><a href="topics/rusers/index.html" target = "_blank" id="talk">SLC R Users Lightning Talk</a></li>
+  <li id="talk" class="website"><a href="topics/ruser/index.html" target = "_blank" id="talk">SLC R Users Lightning Talk</a></li>
   
   <li id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></li>
   
