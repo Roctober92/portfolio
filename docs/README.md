@@ -13,6 +13,8 @@
   
   <li id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></li>
   
+  <li id="talk" class="website"><a href="topics/comap/index.html" target = "_blank" id="talk">SLC R Users Lightning Talk</a></li>
+  
   <li id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></li>
   
   <li id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></li>
@@ -48,7 +50,7 @@ font-family: 'Nanum Gothic', sans-serif;
 color: #0077B5;
 }
 #website{
-color: #7F52E8;
+color: #66F82A;
 }
 .website{
 font-size: 40px;
@@ -65,6 +67,9 @@ color: black;
 }
 #model{
 color: #214485;
+}
+#talk{
+color: #D92AF8;
 }
 #math335{
 color: #146419;
