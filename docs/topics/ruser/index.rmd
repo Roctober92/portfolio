@@ -1,8 +1,10 @@
 ---
+author: Andrew Wolfe
 output:
   revealjs::revealjs_presentation:
     transition: slide
     center: TRUE
+    theme: serif
 ---
 
 ```{r setup, include=FALSE}
@@ -11,7 +13,9 @@ library(pacman)
 p_load(tidyverse, lubridate, revealjs)
 ```
 
-# Climate Research in R {data-background="snow.jpg"}
+# {data-background="slide1.png"}
+
+Andrew Wolfe
 
 
 
