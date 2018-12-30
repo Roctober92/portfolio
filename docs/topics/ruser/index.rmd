@@ -21,7 +21,9 @@ Andrew Wolfe
 
 ## {data-background="slide3.png"}
 
+## {data-background="max_plot.png"}
 
+## {data-background="slide4.png"}
 
 
 
