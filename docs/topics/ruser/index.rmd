@@ -11,4 +11,8 @@ library(pacman)
 p_load(tidyverse, lubridate, revealjs)
 ```
 
-# Climate Research in R {#title}
+# Climate Research in R {data-background="snow.jpg"}
+
+
+
+
