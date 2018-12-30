@@ -17,6 +17,10 @@ p_load(tidyverse, lubridate, revealjs)
 
 Andrew Wolfe
 
+## Goal: How do rising temperatures affect Colorado snowpack at different elevations?
+
+## {data-background=""}
+
 
 
 
