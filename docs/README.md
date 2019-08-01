@@ -14,7 +14,7 @@
   <li id="model" class="website"><a href="topics/comap/index.html" target = "_blank" id="model">2018 COMAP Math Modeling Competition</a></li>
   
   <li id="talk" class="website"><a href="topics/comap/index.html" target = "_blank" id="talk">SLC R Users Lightning Talk</a></li>
-  
+
   <li id="linkedin"><a id="linkedin" href="https://www.linkedin.com/in/akwolfe/" target="_blank">LinkedIn</a></li>
   
   <li id="website" class="website"><a id="website" class="website" href="https://roctober92.github.io" target="_blank">Website Created</a></li>

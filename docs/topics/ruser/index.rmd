@@ -11,4 +11,23 @@ library(pacman)
 p_load(tidyverse, lubridate, revealjs)
 ```
 
-# Climate Research in R {#title}
+# {data-background="slide1.png"}
+
+Andrew Wolfe
+
+## How do rising temperatures affect Colorado snowpack at different elevations?
+
+## {data-background="slide3.png"}
+
+## {data-background="max_plot.png"}
+
+## {data-background="slide4.png"}
+
+## {data-background="mapslide.png"}
+
+## {data-background="slide5.png"}
+
+## {data-background="lastslide.png"}
+
+## {data-background="maysnow.png"}
+
