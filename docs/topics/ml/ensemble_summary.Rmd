@@ -7,19 +7,19 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-<p id="title">Ensemble Learning</p>
+<p id="title">Algorithm Gridding</p>
 
 <br><br>
 
-<p id="desc">Ensemble is really useful. It's going through several machine learning algorithms and parameters over 1 or many datasets. We do this to see which algorithms may perform better for a certain dataset, or certain types of datasets. This way, instead of wondering <i>which algorithm would predict my data the best</i>, you get to compare all of them at once!<br><br>I have attached a certain ensemble I assembled with a team of 3 people, which report and code I created. In this ensemble, we analyzed 8 different data sets with 6 different algorithms, 3 of which we had 2 sets of parameters, and did every algorithm with 2 different <i>cross validation</i> amounts, making 18 total algorithm combinations.</p>
+<p id="desc">Algorithm Gridding is really useful. It's going through several machine learning algorithms and parameters over 1 or many datasets. We do this to see which algorithms may perform better for a certain dataset, or certain types of datasets. This way, instead of wondering <i>which algorithm would predict my data the best</i>, you get to compare all of them at once!<br><br>I have attached a certain grid I assembled with a team of 3 people, which report and code I created. In this grid, we analyzed 8 different data sets with 6 different algorithms, 3 of which we had 2 sets of parameters, and did every algorithm with 2 different <i>cross validation</i> amounts, making 18 total algorithm combinations.</p>
 
 <br><br>
 
-<p id="section"><a id="section" href="ensemble.html" target="_blank">Ensemble Report</a></p>
+<p id="section"><a id="section" href="ensemble.html" target="_blank">Grid Report</a></p>
 
 <br><br>
 
-<p id="desc">The purpose of the report was to visualize how the different algorithsm perform. We observed that the <strong>Naive Bayes</strong> algorithm varied the most in accuracy, <strong>row amount</strong> wasn't a factor, the amount of <strong>unique targets</strong> strongly affects the accuracy across all algorithms (as expected), and for the most part the algorithms performed about the same across all datasets, which attests to the <strong>no free lunch theory</strong>, which states that across all possible datasets, all algorithms perform about the same.</p>
+<p id="desc">The purpose of the report was to visualize how the different algorithms perform. We observed that the <strong>Naive Bayes</strong> algorithm varied the most in accuracy, <strong>row amount</strong> wasn't a factor, the amount of <strong>unique targets</strong> strongly affects the accuracy across all algorithms (as expected), and for the most part the algorithms performed about the same across all datasets, which attests to the <strong>no free lunch theory</strong>, which states that across all possible datasets, all algorithms perform about the same.</p>
 
 <br><br>
 
@@ -27,7 +27,7 @@ library(tidyverse)
 
 <br><br>
 
-<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/project_shell.py" target="_blank">Code for Ensemble (Python)</a></p>
+<p id="section"><a id="section" href="https://github.com/Roctober92/portfolio/blob/master/docs/topics/ml/project_shell.py" target="_blank">Code for Grid (Python)</a></p>
 
 
 

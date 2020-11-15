@@ -11,7 +11,7 @@ library(DT)
 data <- read_csv("r_ensemble.csv")
 ```
 
-<h1 id="title">Ensemble Exploration<h1>
+<h1 id="title">Grid Exploration<h1>
 
 <br>
 
@@ -19,7 +19,7 @@ data <- read_csv("r_ensemble.csv")
 
 <br><br>
 
-<p id="desc">The following is a visual report of an ensemble of many machine learning algorithms, with different combinations of cross validations, dataset size, data types, and individual algorithm parameters.</p>
+<p id="desc">The following is a visual report of an grid of many machine learning algorithms, with different combinations of cross validations, dataset size, data types, and individual algorithm parameters.</p>
 
 <br><br>
 

@@ -13,7 +13,7 @@ library(lubridate)
 <br><br>
 
 <center>
-<p id = "note"><i>The following is not a full comprehension of my machine learning knowledge and experience, but rather a few select samples. Code for implementing several algorithms is found in the in the <strong>ensemble learning</strong> link.</i></p>
+<p id = "note"><i>The following is not a full comprehension of my machine learning knowledge and experience, but rather a few select samples. Code for implementing several algorithms is found in the in the <strong>gridding</strong> link.</i></p>
 </center>
 
 <br><br>
@@ -30,7 +30,7 @@ library(lubridate)
 
 <br><br>
 
-<p id="method"><a id="method" class="ensemble" href="ensemble_summary.html" target="_blank" >Ensemble Learning</a></p>
+<p id="method"><a id="method" class="ensemble" href="ensemble_summary.html" target="_blank" >Algorithm Gridding</a></p>
 
 <br>
 
